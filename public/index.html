@@ -7,14 +7,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --black: #0a0a0a;
-    --white: #f5f2ed;
+    --black: #111111;
+    --white: #e0e0e0;
     --cream: #ebe6dd;
     --accent: #4f8cff;
     --accent-glow: #3a6fd8;
-    --muted: #8a8578;
-    --dark-card: #141412;
-    --dark-card-border: #2a2822;
+    --muted: #a0a0a0;
+    --dark-card: #1a1a1a;
+    --dark-card-border: rgba(255, 255, 255, 0.1);
     --green: #34d399;
     --red: #ef4444;
   }
@@ -164,7 +164,7 @@
     background: transparent;
     color: var(--white);
     padding: 1rem 2rem;
-    border: 1px solid var(--dark-card-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 500;
@@ -172,7 +172,7 @@
     transition: all 0.3s;
     text-decoration: none;
   }
-  .btn-secondary:hover { border-color: var(--muted); background: rgba(255,255,255,0.03); }
+  .btn-secondary:hover { border-color: var(--accent); background: rgba(255,255,255,0.05); }
 
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -195,8 +195,8 @@
   }
   .ticker span {
     font-family: 'Instrument Serif', serif;
-    font-size: 1.1rem;
-    color: var(--muted);
+    font-size: 1.3rem;
+    color: var(--cream);
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -205,7 +205,7 @@
   .ticker span::after {
     content: '◆';
     color: var(--accent);
-    font-size: 0.5rem;
+    font-size: 0.65rem;
   }
   @keyframes scroll {
     0% { transform: translateX(0); }
@@ -213,7 +213,12 @@
   }
 
   /* ── SECTIONS ── */
-  section { padding: 6rem 3rem; }
+  section { padding: 6.25rem 3rem; }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
   .section-label {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -253,7 +258,8 @@
     transition: border-color 0.3s, transform 0.3s;
   }
   .problem-card:hover {
-    border-color: rgba(79,140,255,0.3);
+    border-color: rgba(79,140,255,0.6);
+    box-shadow: 0 0 15px rgba(79,140,255,0.15);
     transform: translateY(-3px);
   }
   .problem-card .icon {
@@ -282,14 +288,25 @@
   .compare-col {
     padding: 2.5rem;
     border-radius: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
   }
   .compare-col.legacy {
     background: rgba(239,68,68,0.04);
     border: 1px solid rgba(239,68,68,0.15);
   }
+  .compare-col.legacy:hover {
+    border-color: rgba(239,68,68,0.5);
+    box-shadow: 0 0 20px rgba(239,68,68,0.1);
+    transform: translateY(-3px);
+  }
   .compare-col.modern {
     background: rgba(52,211,153,0.04);
     border: 1px solid rgba(52,211,153,0.15);
+  }
+  .compare-col.modern:hover {
+    border-color: rgba(52,211,153,0.5);
+    box-shadow: 0 0 20px rgba(52,211,153,0.1);
+    transform: translateY(-3px);
   }
   .compare-col h3 {
     font-family: 'Instrument Serif', serif;
@@ -348,11 +365,7 @@
 
   /* ── STATS BANNER ── */
   .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
     padding: 5rem 3rem;
-    text-align: center;
   }
   .stat-num {
     font-family: 'Instrument Serif', serif;
@@ -383,7 +396,7 @@
     position: relative;
     transition: border-color 0.3s, transform 0.3s;
   }
-  .step:hover { border-color: rgba(79,140,255,0.3); transform: translateY(-3px); }
+  .step:hover { border-color: rgba(79,140,255,0.6); box-shadow: 0 0 15px rgba(79,140,255,0.15); transform: translateY(-3px); }
   .step::before {
     counter-increment: step;
     content: counter(step, decimal-leading-zero);
@@ -480,9 +493,6 @@
   footer {
     border-top: 1px solid var(--dark-card-border);
     padding: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: var(--muted);
     font-size: 0.85rem;
   }
@@ -498,7 +508,9 @@
     .problem-grid, .compare-grid, .process-steps, .stats, .urgency-points, .services-grid, .about-stats { grid-template-columns: 1fr; }
     .compare-grid { gap: 1rem; }
     .compare-vs { padding: 0.5rem 0; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
+    .container { padding: 0; }
+    .stats .container { grid-template-columns: 1fr; }
+    footer .container { flex-direction: column; gap: 1rem; text-align: center; }
   }
 
   /* ── FAQ (details/summary) ── */
@@ -513,8 +525,8 @@
     margin-bottom: 0.75rem;
     transition: border-color 0.3s;
   }
-  .faq-item:hover { border-color: rgba(79,140,255,0.3); }
-  .faq-item[open] { border-color: rgba(79,140,255,0.3); }
+  .faq-item:hover { border-color: rgba(79,140,255,0.6); box-shadow: 0 0 15px rgba(79,140,255,0.15); }
+  .faq-item[open] { border-color: rgba(79,140,255,0.6); }
   .faq-item summary {
     font-family: 'Instrument Serif', serif;
     font-size: 1.1rem;
@@ -645,8 +657,8 @@
   <div class="logo">Simpl<span>Works</span>.ai</div>
   <div class="nav-links">
     <a href="#services">Services</a>
-    <a href="#process">Process</a>
     <a href="#clients">Who We Serve</a>
+    <a href="#process">Process</a>
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
     <a href="#audit" class="nav-cta">Get a Free Website Audit</a>
@@ -655,12 +667,14 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="container">
   <div class="hero-badge"><span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor" id="typewriter-cursor"></span><div class="pulse" id="typewriter-pulse" style="display:none;"></div></div>
   <h1>Your Website Should Work For You.<br>Not Cost You <span style="color: var(--white);">Customers.</span></h1>
   <p class="hero-sub">Most business websites look fine and perform terribly. We build the ones that actually work.</p>
   <div class="hero-actions">
     <a href="#cta" class="btn-primary">Book a Strategy Call</a>
     <a href="#services" class="btn-secondary">See What We Build</a>
+  </div>
   </div>
 </section>
 
@@ -686,6 +700,7 @@
 
 <!-- SERVICES -->
 <section id="services">
+  <div class="container">
   <div class="section-label">What We Build</div>
   <h2 class="section-title">Built as Infrastructure. Not Decoration.</h2>
   <p class="section-sub">Every <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span> site is built for performance, visibility, and lead generation from day one. No legacy sites, just clean, fast websites engineered to get found by Google, by AI, and by the people who matter.</p>
@@ -721,10 +736,12 @@
       <p>Every site looks sharp on phones, tablets, and desktops. No pinching, no broken layouts, no sideways scrolling.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- WHO WE SERVE -->
 <section id="clients">
+  <div class="container">
   <div class="section-label">Who We Serve</div>
   <h2 class="section-title">We build for businesses that need results. Not just a redesign.</h2>
   <p class="section-sub">If your website isn't generating leads, you're leaving money on the table. That's what we fix.</p>
@@ -750,10 +767,12 @@
       <p>Consultants, freelancers, agencies &mdash; sites that explain what you offer and make it easy for clients to say yes.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- PROBLEM (Pain Points from V3) -->
 <section class="problem" id="problem">
+  <div class="container">
   <div class="section-label">Sound Familiar?</div>
   <h2 class="section-title">If any of these hit, we need to talk.</h2>
   <p class="section-sub">You don't need another opinion on your website. You need someone to fix it.</p>
@@ -779,10 +798,12 @@
       <p>Templates are built for everyone, which means they're built for no one. Your business deserves a site engineered around what you actually do.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- COMPARISON -->
 <section class="comparison" id="comparison">
+  <div class="container">
   <div class="section-label">The Difference</div>
   <h2 class="section-title">Your old site is a liability. Here's what's changed.</h2>
   <p class="section-sub">It's not just a redesign. It's a fundamental shift in how your site communicates &mdash; to humans and to AI.</p>
@@ -815,10 +836,12 @@
       </ul>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
+  <div class="container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: center;">
   <div>
     <div class="stat-num">400M+</div>
     <div class="stat-label">Weekly users asking AI for<br>business recommendations</div>
@@ -831,10 +854,12 @@
     <div class="stat-num">6 mo.</div>
     <div class="stat-label">Window before early movers<br>lock in AI authority</div>
   </div>
+  </div>
 </div>
 
 <!-- PROCESS -->
 <section id="process">
+  <div class="container">
   <div class="section-label">How It Works</div>
   <h2 class="section-title">Three steps. About a week.</h2>
   <p class="section-sub">No drawn-out timelines. No mystery. We figure out what you need, build it right, and get you live.</p>
@@ -852,10 +877,12 @@
       <p>We launch, test everything, and make sure it runs right. You get a live site with managed hosting and ongoing support. You focus on your business.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="container">
   <div class="section-label">About</div>
   <h2 class="section-title">Built by someone who understands business. Not just code.</h2>
   <p class="section-sub" style="margin-top: 2.5rem; max-width: 700px;"><span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span> was founded by Stephanie Belote. Before she ever wrote a line of code, she spent over two decades in the business world &mdash; corporate staffing at AT&amp;T, national account management at First Union Bank, building and running a healthcare consulting company that helped medical practices increase their revenue, and years as a marketing rep in the insurance industry learning exactly how businesses attract and retain customers.</p>
@@ -879,19 +906,23 @@
       <div class="about-stat-label">Every site built to convert</div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- WHY AI-READY -->
 <section class="urgency" id="ai-ready">
+  <div class="container">
   <div class="section-label">Built for How Search Works Now</div>
   <h2 class="section-title">Google isn't the only thing finding your business anymore.</h2>
   <p class="section-sub" style="margin-top: 2.5rem; max-width: 700px;">AI assistants &mdash; ChatGPT, Perplexity, Google AI Overview &mdash; are increasingly how people find businesses. They don't send traffic to links. They summarize answers. If your site isn't structured to be found and quoted by those systems, you're invisible to a growing share of your market.</p>
   <p class="section-sub" style="max-width: 700px;">Every <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span> site is built for both: traditional search rankings and AI-driven discovery. That's not an add-on. It's how we build.</p>
   <p class="section-sub" style="max-width: 700px;">Your business should show up wherever your customers are looking &mdash; whether that's a search results page or an AI assistant answering a question at 11pm on a phone. We make sure it does.</p>
+  </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq">
+  <div class="container">
   <div class="section-label">FAQ</div>
   <h2 class="section-title">Questions I hear a lot.</h2>
   <div class="faq-list">
@@ -928,10 +959,12 @@
       <p>Websites are the starting point. Every site we build is designed to grow with your business &mdash; lead capture, email systems, hosting, and more are all part of the package.</p>
     </details>
   </div>
+  </div>
 </section>
 
 <!-- FREE AUDIT -->
 <section class="urgency" id="audit">
+  <div class="container">
   <div class="section-label">Free Site Audit</div>
   <h2 class="section-title">Find out what's wrong with your website &mdash; free.</h2>
   <p class="section-sub" style="margin-top: 2.5rem; max-width: 700px;">Most small business websites have problems you can't see &mdash; slow load times, missing SEO basics, and zero visibility in AI search results. You won't know until someone checks.</p>
@@ -945,10 +978,12 @@
     <button type="submit" id="audit-submit-btn" class="btn-primary form-submit">Get Your Free Website Audit</button>
   </form>
   <p id="audit-form-status" style="margin-top: 16px; font-size: 0.95rem; color: var(--muted); display: none; text-align: center;"></p>
+  </div>
 </section>
 
 <!-- CTA -->
 <section class="final-cta" id="cta">
+  <div class="container">
   <div class="section-label">Simple Works</div>
   <h2 class="section-title">Ready when you are.</h2>
   <p class="section-sub">Fill out the form and I'll be back to you within 24 hours.</p>
@@ -965,13 +1000,16 @@
 
   <p style="color: var(--muted); font-size: 0.95rem; margin-top: 2rem;"><a href="mailto:stephanie@simplworks.ai" style="color: var(--white); text-decoration: none;">stephanie@simplworks.ai</a> &nbsp;&middot;&nbsp; <a href="tel:+16786174598" style="color: var(--white); text-decoration: none;">678.617.4598</a></p>
   <p style="color: var(--muted); font-size: 0.85rem; margin-top: 1.2rem; font-style: italic;">These aren't design projects. They're revenue systems.</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="logo">Simpl<span>Works</span>.ai</div>
-  <div>&copy; 2026 <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span>.ai &mdash; All rights reserved.</div>
-  <div>Designed and built by <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span>.ai</div>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo">Simpl<span>Works</span>.ai</div>
+    <div>&copy; 2026 <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span>.ai &mdash; All rights reserved.</div>
+    <div>Designed and built by <span class="logo" style="font-size: inherit; display: inline;">Simpl<span>Works</span></span>.ai</div>
+  </div>
 </footer>
 
 <script>

@@ -47,6 +47,9 @@ export default {
     }
 
     // Everything else: serve static assets
-    return env.ASSETS.fetch(request);
+    const response = await env.ASSETS.fetch(request);
+    const newResponse = new Response(response.body, response);
+    newResponse.headers.set('Cache-Control', 'public, max-age=60, s-maxage=60');
+    return newResponse;
   },
 };
