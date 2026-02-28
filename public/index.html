@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2QP0NN6B5X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2QP0NN6B5X');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Custom Websites for Startups & Small Businesses | SimplWorks.ai</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
@@ -424,6 +432,11 @@
   .urgency {
     background: linear-gradient(135deg, rgba(79,140,255,0.06) 0%, transparent 50%);
     border-top: 1px solid var(--dark-card-border);
+  }
+  .urgency-audit {
+    background: #1e1e1e;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
   .urgency-points {
     display: grid;
@@ -963,7 +976,7 @@
 </section>
 
 <!-- FREE AUDIT -->
-<section class="urgency" id="audit">
+<section class="urgency-audit" id="audit">
   <div class="container">
   <div class="section-label">Free Site Audit</div>
   <h2 class="section-title">Find out what's wrong with your website &mdash; free.</h2>
