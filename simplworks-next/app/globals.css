@@ -502,6 +502,16 @@ body {
   overflow: hidden;
 }
 
+/* Clearfix: contain the drop-cap float within its own paragraph so the next
+   paragraph doesn't get pushed right by a residual float (happens when the
+   first paragraph's text is shorter than the drop-cap letter is tall). */
+.drop-cap::after,
+.drop-cap-manual::after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
 .gold-first::first-letter {
   color: var(--gold);
   font-weight: 700;
@@ -776,6 +786,115 @@ details[open] .faq-question::after {
 
 .faq-answer a:hover {
   border-bottom-color: var(--gold);
+}
+
+/* ========== EDITORIAL OVERLAY (The Builder full profile pop-out) ========== */
+.editorial-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.98);
+  z-index: 2000;
+  display: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: overlayFade 0.5s ease-out;
+}
+
+.editorial-overlay.open {
+  display: block;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.editorial-overlay-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 48px 100px 76px;
+}
+
+.editorial-overlay-inner p {
+  margin-bottom: 1.5rem;
+  line-height: 1.85;
+  color: var(--body);
+}
+
+.editorial-overlay-close {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2010;
+  line-height: 1;
+}
+
+.editorial-overlay-close:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.continue-reading {
+  display: inline-block;
+  margin-top: 2.5rem;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.continue-reading:hover {
+  text-shadow: 0 0 12px rgba(245, 230, 163, 0.4);
+}
+
+.editorial-pullquote {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--gold);
+  line-height: 1.5;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .editorial-overlay-inner {
+    padding: 70px 24px 80px 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editorial-overlay-inner {
+    padding: 60px 20px 60px 34px;
+  }
+  .editorial-overlay-close {
+    top: 1rem;
+    right: 1rem;
+  }
 }
 
 /* ========== FOOTER ========== */
