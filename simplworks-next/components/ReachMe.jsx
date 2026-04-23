@@ -1,17 +1,19 @@
 /**
  * REACH ME — Belief 8 (Conversion/Contact) + Module 2 Scope
  *
- * DC Copy Changes v1.1 Change 4 + Stage 4C round 7 restructure:
- * - Drop-cap single line: "You have two options."
- * - Bright white: "Close this page and go back to what you had before."
- * - OR divider (standalone, centered, caps, bright white)
- * - Bright white: "Let me show you what's actually going on with your website."
- * - Friction Audit offer block (scoped per Framework v1.1)
- * - Real form (FrictionAuditForm) replacing the unreliable mailto: link
- * - Phone as plain text (tel: links opened unreliable handlers on desktop)
+ * Two paths:
+ *   - Existing site → "FIX IT" → FrictionAuditModal
+ *   - No site yet  → "BUILD IT" → BuildRequestModal
+ *
+ * Both modals are lazy-loaded via their respective CTA wrappers
+ * (AuditCta, BuildCta) so modal bytes only ship on click.
+ *
+ * Reach Me stays a server component; only the CTA wrappers and the
+ * modals themselves are client-rendered.
  */
 
-import FrictionAuditForm from './FrictionAuditForm';
+import AuditCta from './AuditCta';
+import BuildCta from './BuildCta';
 
 export default function ReachMe() {
   return (
@@ -35,7 +37,7 @@ export default function ReachMe() {
         <p className="beat-or">OR</p>
 
         <p className="beat-white">
-          Let me show you what&apos;s actually going on with your website.
+          Find out what&apos;s actually going on with your site.
         </p>
 
         <div className="gold-rule-block">
@@ -53,15 +55,28 @@ export default function ReachMe() {
           </p>
         </div>
 
+        <AuditCta />
+
+        <div className="subsection-divider"></div>
+
+        <p className="section-label">No Website Yet?</p>
+        <h2 className="section-heading">
+          Then this is your first rodeo.
+        </h2>
         <p className="beat">
-          Send me your URL and I&apos;ll send back what I find.
+          And that&apos;s actually the best place to start. No template to
+          undo. No bad habits to fix. No agency that already failed you.
+          Just a real website built from scratch, around your business, in
+          about a week.
+        </p>
+        <p
+          className="beat"
+          style={{ color: 'var(--white)', fontWeight: 700 }}
+        >
+          Tell me what you&apos;re building. I&apos;ll send you a quote.
         </p>
 
-        <FrictionAuditForm />
-
-        <p className="reach-phone">
-          Prefer to talk? Call or text 678.617.4598.
-        </p>
+        <BuildCta />
       </div>
     </section>
   );

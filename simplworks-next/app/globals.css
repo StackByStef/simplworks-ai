@@ -209,8 +209,9 @@ body {
   margin: 0 auto 2rem;
 }
 
-/* THE INSIDER button */
-.insider-btn {
+/* THE INSIDER button + CTA buttons (FIX IT / BUILD IT) share base styles */
+.insider-btn,
+.cta-btn {
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -218,7 +219,7 @@ body {
   color: var(--btn-text);
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -232,22 +233,24 @@ body {
   box-shadow: 0 4px 20px rgba(227, 197, 113, 0.3);
 }
 
-.insider-btn:hover {
+.insider-btn:hover,
+.cta-btn:hover {
   background: var(--gold-gradient-hover);
   animation-play-state: paused;
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(227, 197, 113, 0.45);
 }
 
-.insider-btn:focus-visible {
+.insider-btn:focus-visible,
+.cta-btn:focus-visible {
   outline: 2px solid var(--gold-bright);
   outline-offset: 4px;
 }
 
-/* Shimmer on load: a diagonal white highlight sweeps across the
-   button once, ~200ms after the typewriter finishes (~2.8s total).
-   Fires once, then the normal float takes over. */
-.insider-btn::before {
+/* Shimmer gradient (shared). Brighter + wider band + slower sweep than
+   the previous values so the polish moment is actually visible. */
+.insider-btn::before,
+.cta-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -257,16 +260,31 @@ body {
   background: linear-gradient(
     110deg,
     transparent 0%,
-    transparent 40%,
-    rgba(255, 255, 255, 0.55) 50%,
-    transparent 60%,
+    transparent 30%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 70%,
     transparent 100%
   );
-  animation: insider-shimmer 1.2s ease-in-out 3s 1;
   pointer-events: none;
 }
 
-@keyframes insider-shimmer {
+/* THE INSIDER: shimmer fires on page load (~3s after, after typewriter). */
+.insider-btn::before {
+  animation: shimmer-sweep 1.8s ease-in-out 3s 1;
+}
+
+/* CTA buttons (FIX IT / BUILD IT): shimmer fires the first time the
+   button scrolls into view. The wrapper component adds
+   .cta-btn--in-view via IntersectionObserver. */
+.cta-btn::before {
+  animation: none;
+}
+
+.cta-btn--in-view::before {
+  animation: shimmer-sweep 1.8s ease-in-out 0.3s 1;
+}
+
+@keyframes shimmer-sweep {
   0% {
     left: -100%;
   }
@@ -739,88 +757,114 @@ body {
   font-size: 1.15rem;
 }
 
+/* OR divider — gold gradient, left-aligned, tightened letter-spacing
+   to keep the edge clean without the center-aligned optical offset. */
 .beat-or {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.4rem;
-  color: var(--white);
-  letter-spacing: 0.4em;
-  text-align: center;
+  letter-spacing: 0.2em;
+  text-align: left;
   margin: 2.5rem 0 2.5rem;
-  padding-left: 0.4em; /* optical balance for wide letter-spacing */
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.reach-phone {
+/* Subsection divider between the audit flow and "No Website Yet?" block */
+.subsection-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin: 5rem 0 3rem;
+}
+
+/* ========== MODAL FORM (FrictionAuditModal + BuildRequestModal) ========== */
+.modal-form {
+  max-width: 600px;
+  padding: 3.5rem 2.75rem;
+}
+
+.form-in-modal {
   margin-top: 2rem;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
   font-family: var(--font-body);
+  font-weight: 400;
   font-size: 0.95rem;
   color: var(--muted);
-}
-
-/* ========== FRICTION AUDIT FORM ========== */
-.friction-form {
-  margin-top: 2rem;
-  max-width: 540px;
-}
-
-.friction-field {
-  margin-bottom: 1.75rem;
-}
-
-.friction-label {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.75rem;
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
-}
-
-.friction-optional {
-  color: var(--dim);
-  text-transform: none;
   letter-spacing: 0;
-  font-weight: 400;
-  font-size: 0.8rem;
+  text-transform: none;
 }
 
-.friction-input {
+.form-input {
   width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border);
+  min-height: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
   color: var(--white);
   font-family: var(--font-body);
-  font-size: 1.1rem;
-  padding: 10px 0;
-  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
 }
 
-.friction-input:focus {
+.form-input:focus {
   outline: none;
-  border-bottom-color: var(--gold);
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(227, 197, 113, 0.12);
 }
 
-.friction-input::placeholder {
+.form-input::placeholder {
   color: var(--dim);
 }
 
-.friction-input:disabled {
-  opacity: 0.5;
+.form-input:disabled {
+  opacity: 0.55;
   cursor: wait;
 }
 
-.friction-submit {
-  margin-top: 0.75rem;
-  padding: 14px 36px;
+.form-caption {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: -0.5rem 0 1.75rem;
+  line-height: 1.5;
+}
+
+.form-error {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 138, 138, 0.08);
+  border-left: 2px solid #ff8a8a;
+  color: #ff8a8a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.form-submit {
+  margin-top: 1.25rem;
+  padding: 16px 36px;
+  min-height: 48px;
+  width: 100%;
   background: var(--gold-gradient);
   color: var(--btn-text);
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
@@ -829,60 +873,84 @@ body {
   box-shadow: 0 4px 20px rgba(227, 197, 113, 0.3);
 }
 
-.friction-submit:hover:not(:disabled) {
+.form-submit:hover:not(:disabled) {
   background: var(--gold-gradient-hover);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(227, 197, 113, 0.45);
 }
 
-.friction-submit:focus-visible {
+.form-submit:focus-visible {
   outline: 2px solid var(--gold-bright);
   outline-offset: 4px;
 }
 
-.friction-submit:disabled {
+.form-submit:disabled {
   opacity: 0.55;
   cursor: wait;
+  transform: none;
 }
 
-.friction-error {
-  margin-top: 1rem;
-  color: #ff8a8a;
-  font-size: 0.95rem;
-  line-height: 1.5;
+/* ========== THANK-YOU STATE ========== */
+.form-thankyou {
+  padding: 1rem 0;
 }
 
-.friction-success {
-  margin-top: 2rem;
-  border-left: 2px solid var(--gold);
-  padding: 1rem 0 1rem 1.5rem;
-}
-
-.friction-success-title {
+.form-thankyou-headline {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: var(--white);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
 }
 
-.friction-success-body {
+.form-thankyou-body {
   color: var(--body);
   line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 480px) {
+.form-thankyou-email {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.form-thankyou-signoff {
+  font-family: var(--font-wordmark);
+  font-style: italic;
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.form-thankyou-phone {
+  font-family: var(--font-body);
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
   .beat-or {
     font-size: 1.2rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.18em;
     margin: 2rem 0;
   }
-  .friction-input {
-    font-size: 1rem;
+  .modal-form {
+    padding: 2.5rem 1.5rem;
   }
-  .friction-submit {
-    width: 100%;
-    text-align: center;
+  .form-input {
+    font-size: 16px; /* prevents iOS zoom-on-focus */
+    min-height: 48px;
+  }
+  .form-submit {
+    font-size: 0.85rem;
+    min-height: 52px;
+  }
+  .form-thankyou-headline {
+    font-size: 1.5rem;
   }
 }
 
@@ -1226,10 +1294,13 @@ footer .wordmark {
     animation: none;
     opacity: 1;
   }
-  .insider-btn {
+  .insider-btn,
+  .cta-btn {
     animation: none;
   }
-  .insider-btn::before {
+  .insider-btn::before,
+  .cta-btn::before,
+  .cta-btn--in-view::before {
     animation: none;
   }
   html {
