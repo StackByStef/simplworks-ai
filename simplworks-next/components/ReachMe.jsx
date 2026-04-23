@@ -1,11 +1,18 @@
 /**
  * REACH ME — Belief 8 (Conversion/Contact) + Module 2 Scope
  *
- * DC Copy Changes v1.1, Change 4 applied directly — full section rewrite
- * anchored on the Friction Audit offer (scoped per Friction Audit Framework v1.1).
- *
- * V1: mailto link. Form + API route deferred to V2 per plan.
+ * DC Copy Changes v1.1 Change 4 + Stage 4C round 7 restructure:
+ * - Drop-cap single line: "You have two options."
+ * - Bright white: "Close this page and go back to what you had before."
+ * - OR divider (standalone, centered, caps, bright white)
+ * - Bright white: "Let me show you what's actually going on with your website."
+ * - Friction Audit offer block (scoped per Framework v1.1)
+ * - Real form (FrictionAuditForm) replacing the unreliable mailto: link
+ * - Phone as plain text (tel: links opened unreliable handlers on desktop)
  */
+
+import FrictionAuditForm from './FrictionAuditForm';
+
 export default function ReachMe() {
   return (
     <section className="section section-black" id="reach">
@@ -18,15 +25,17 @@ export default function ReachMe() {
 
         <p className="beat drop-cap-manual">
           <span className="dc-letter">Y</span>
-          <span className="dc-lines">
-            ou have two options.
-            <br />
-            Close this page and go back to what you had before.
-          </span>
+          <span className="dc-lines">ou have two options.</span>
         </p>
 
-        <p className="beat">
-          Or let me show you what&apos;s actually going on with your website.
+        <p className="beat-white">
+          Close this page and go back to what you had before.
+        </p>
+
+        <p className="beat-or">OR</p>
+
+        <p className="beat-white">
+          Let me show you what&apos;s actually going on with your website.
         </p>
 
         <div className="gold-rule-block">
@@ -48,16 +57,11 @@ export default function ReachMe() {
           Send me your URL and I&apos;ll send back what I find.
         </p>
 
-        <p className="talk-trigger" style={{ marginTop: '2.5rem' }}>
-          <a href="mailto:stephanie@simplworks.ai?subject=Friction%20Audit%20Request">
-            stephanie@simplworks.ai
-          </a>
-        </p>
+        <FrictionAuditForm />
 
-        <div className="reach-contact">
-          Or if you&apos;d rather talk:{' '}
-          <a href="tel:+16786174598">678.617.4598</a>
-        </div>
+        <p className="reach-phone">
+          Prefer to talk? Call or text 678.617.4598.
+        </p>
       </div>
     </section>
   );

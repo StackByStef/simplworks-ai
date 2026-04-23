@@ -26,8 +26,8 @@ export default function Home() {
         <Tdv />
         <TheProcess />
         <TheBuilder />
-        <Faq />
         <ReachMe />
+        <Faq />
       </main>
 
       <ChatIcon />

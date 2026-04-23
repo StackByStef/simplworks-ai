@@ -731,36 +731,159 @@ body {
 }
 
 /* ========== REACH ME ========== */
-.reach-contact {
+.beat-white {
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: 1.15rem;
+}
+
+.beat-or {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--white);
+  letter-spacing: 0.4em;
+  text-align: center;
+  margin: 2.5rem 0 2.5rem;
+  padding-left: 0.4em; /* optical balance for wide letter-spacing */
+}
+
+.reach-phone {
   margin-top: 2rem;
   font-family: var(--font-body);
+  font-size: 0.95rem;
   color: var(--muted);
 }
 
-.reach-contact a {
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* ========== FRICTION AUDIT FORM ========== */
+.friction-form {
+  margin-top: 2rem;
+  max-width: 540px;
 }
 
-.reach-contact a:hover {
-  color: var(--gold);
+.friction-field {
+  margin-bottom: 1.75rem;
 }
 
-.talk-trigger {
+.friction-label {
+  display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.talk-trigger a {
+  font-size: 0.75rem;
   color: var(--gold);
-  text-decoration: none;
-  transition: opacity 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
 }
 
-.talk-trigger a:hover {
-  opacity: 0.85;
+.friction-optional {
+  color: var(--dim);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.friction-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  padding: 10px 0;
+  transition: border-color 0.3s ease;
+}
+
+.friction-input:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+
+.friction-input::placeholder {
+  color: var(--dim);
+}
+
+.friction-input:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.friction-submit {
+  margin-top: 0.75rem;
+  padding: 14px 36px;
+  background: var(--gold-gradient);
+  color: var(--btn-text);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(227, 197, 113, 0.3);
+}
+
+.friction-submit:hover:not(:disabled) {
+  background: var(--gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(227, 197, 113, 0.45);
+}
+
+.friction-submit:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 4px;
+}
+
+.friction-submit:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.friction-error {
+  margin-top: 1rem;
+  color: #ff8a8a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.friction-success {
+  margin-top: 2rem;
+  border-left: 2px solid var(--gold);
+  padding: 1rem 0 1rem 1.5rem;
+}
+
+.friction-success-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.friction-success-body {
+  color: var(--body);
+  line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+  .beat-or {
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    margin: 2rem 0;
+  }
+  .friction-input {
+    font-size: 1rem;
+  }
+  .friction-submit {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ========== FAQ (DC Change 5) ========== */

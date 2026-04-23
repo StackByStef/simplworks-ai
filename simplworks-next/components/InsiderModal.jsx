@@ -21,8 +21,8 @@ const TOC = [
   { href: '#tdv', title: 'Top Dog Vending', desc: 'A SimplWorks case study' },
   { href: '#process', title: 'The Process', desc: 'How the work gets done' },
   { href: '#stephanie', title: 'The Builder', desc: '20 years in business. One new mission.' },
-  { href: '#faq', title: "FAQ's", desc: 'Questions prospects actually ask' },
   { href: '#reach', title: 'Reach Me', desc: 'Start the conversation' },
+  { href: '#faq', title: 'FAQ', desc: 'Questions prospects actually ask' },
 ];
 
 export default function InsiderModal({ onClose }) {
