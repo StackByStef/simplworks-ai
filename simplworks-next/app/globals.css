@@ -577,7 +577,15 @@ body {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--gold);
+  /* Metallic gold gradient (matches .brand-gold typewriter and chat icon).
+     Renders noticeably brighter than flat --gold at small sizes because
+     1.1rem uppercase with 0.15em letter-spacing doesn't have enough
+     glyph mass to carry flat color richly. */
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin-bottom: 1.2rem;
