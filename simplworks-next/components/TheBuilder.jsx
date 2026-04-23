@@ -165,12 +165,19 @@ export default function TheBuilder() {
             One New Mission.
           </h2>
 
-          <p className="drop-cap">
-            Not long ago, I was sitting on a sofa staring into the woods. My
-            coffee was cold. I hadn&apos;t moved in two hours. A friend
-            called and said, &ldquo;Why don&apos;t you come stay with me
-            tonight?&rdquo; That&apos;s the kind of phone call you get when
-            people can tell you&apos;re not okay.
+          {/* drop-cap-manual pattern: .dc-lines creates a BFC so the body
+              text stays in a single indented column beside the floated letter,
+              regardless of paragraph length. Prevents the last-line escape
+              that the CSS ::first-letter float version suffers from. */}
+          <p className="drop-cap-manual">
+            <span className="dc-letter">N</span>
+            <span className="dc-lines">
+              ot long ago, I was sitting on a sofa staring into the woods.
+              My coffee was cold. I hadn&apos;t moved in two hours. A friend
+              called and said, &ldquo;Why don&apos;t you come stay with me
+              tonight?&rdquo; That&apos;s the kind of phone call you get
+              when people can tell you&apos;re not okay.
+            </span>
           </p>
 
           <p>
