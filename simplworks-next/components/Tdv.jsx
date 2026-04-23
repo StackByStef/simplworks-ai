@@ -27,8 +27,7 @@ export default function Tdv() {
 
         <p className="beat drop-cap">
           Emory and Ellie had spent months planning the launch of Top Dog
-          Vending, a smart store company serving apartment communities and
-          commercial properties across East Tennessee.
+          Vending.
         </p>
 
         <p className="beat">The business was ready.</p>
@@ -80,11 +79,11 @@ export default function Tdv() {
         >
           At Launch
         </p>
-        <p className="beat gold-first">I can assist and recommend them.</p>
-        <p className="beat gold-first">Be built and live in one week.</p>
+        <p className="beat gold-first">AI can assist and recommend them.</p>
+        <p className="beat gold-first">Built and live in one week.</p>
         <p className="beat gold-first">
-          See that customers can find the business online and that every lead
-          goes directly to the owner.
+          Customers can find the business online and that every lead goes
+          directly to the owner.
         </p>
 
         <button
