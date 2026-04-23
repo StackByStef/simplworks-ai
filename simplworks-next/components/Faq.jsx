@@ -10,7 +10,7 @@ export default function Faq() {
     <section className="section section-black" id="faq">
       <div className="section-inner">
         <div className="section-divider"></div>
-        <p className="section-label">FAQ</p>
+        <p className="section-label">FAQ&apos;s</p>
         <h2 className="section-heading">Questions, Answered.</h2>
 
         <details className="faq-item">

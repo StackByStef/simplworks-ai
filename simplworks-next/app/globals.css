@@ -543,7 +543,7 @@ body {
 .gold-rule-label {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -902,12 +902,19 @@ footer {
   border-top: 1px solid var(--border);
   padding: 3rem 48px;
   background: var(--black);
+  text-align: center;
+}
+
+footer .wordmark {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .footer-text {
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--dim);
+  font-size: 0.95rem;
+  color: var(--body);
 }
 
 /* ========== CHAT ICON ========== */
@@ -955,6 +962,12 @@ footer {
   }
   footer {
     padding: 2rem 24px;
+  }
+  footer .wordmark {
+    font-size: 1.4rem;
+  }
+  .footer-text {
+    font-size: 0.9rem;
   }
   body {
     font-size: 16px;
