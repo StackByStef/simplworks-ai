@@ -5,19 +5,29 @@
  *
  * Contains:
  * - Masthead wordmark (SimplWorks.)
- * - Typewriter brand name (SIMPLE in white, WORKS in gold gradient)
+ * - Typewriter brand name (SIMPL in white, WORKS in gold gradient) —
+ *   no space, matches the "SimplWorks." masthead for visual congruence.
  * - Tagline, subhead, callout
  * - DC Copy Changes v1.1 Change 1 — hero-filter line
- * - THE INSIDER button + modal (TOC with 7 items including FAQ per Change 5a)
+ * - THE INSIDER button (with shimmer-on-load defined in globals.css).
+ *   The modal itself is lazy-loaded: InsiderModal.jsx is dynamically
+ *   imported only after the user clicks THE INSIDER. Modal bytes are
+ *   excluded from the initial page payload.
  * - Scrolling ticker (pinned to bottom of hero)
  *
  * Respects prefers-reduced-motion.
  */
 
 import { useEffect, useState, Fragment } from 'react';
+import dynamic from 'next/dynamic';
 
-const WORD1 = 'SIMPLE';
-const WORD2 = ' WORKS';
+const InsiderModal = dynamic(() => import('./InsiderModal'), {
+  ssr: false,
+  loading: () => null,
+});
+
+const WORD1 = 'SIMPL';
+const WORD2 = 'WORKS';
 const FULL_TEXT = WORD1 + WORD2;
 
 const TICKER_ITEMS = [
@@ -27,16 +37,6 @@ const TICKER_ITEMS = [
   'GOOGLE AI OVERVIEWS APPEAR ON 47% OF SEARCHES',
   '58% OF GEN Z PREFERS AI OVER GOOGLE',
   'YOUR COMPETITORS ARE ALREADY OPTIMIZING FOR THIS',
-];
-
-const TOC = [
-  { href: '#shift', title: 'The Shift', desc: 'What changed while you were building your business' },
-  { href: '#solution', title: 'The Fix', desc: 'Get your website working as hard as you do' },
-  { href: '#tdv', title: 'Top Dog Vending', desc: 'A SimplWorks case study' },
-  { href: '#process', title: 'The Process', desc: 'How the work gets done' },
-  { href: '#stephanie', title: 'The Builder', desc: '20 years in business. One new mission.' },
-  { href: '#faq', title: "FAQ's", desc: 'Questions prospects actually ask' },
-  { href: '#reach', title: 'Reach Me', desc: 'Start the conversation' },
 ];
 
 export default function Hero() {
@@ -139,11 +139,6 @@ export default function Hero() {
     return () => document.removeEventListener('keydown', handleKey);
   }, [insiderOpen]);
 
-  const closeModal = () => setInsiderOpen(false);
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) closeModal();
-  };
-
   // Derived typewriter state
   const typedWord1 = FULL_TEXT.slice(0, Math.min(typedLength, WORD1.length));
   const typedWord2 =
@@ -183,9 +178,7 @@ export default function Hero() {
             were busy running their business.
           </p>
 
-          <p className="hero-callout">
-            You&apos;re here because you&apos;re ready to move.
-          </p>
+          <p className="hero-callout">Now your website has to catch up.</p>
 
           {/* DC Change 1 — Hero filter line (Belief 2 self-select) */}
           <p className="hero-filter">
@@ -218,39 +211,9 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* THE INSIDER modal */}
-      <div
-        className={`modal-overlay${insiderOpen ? ' open' : ''}`}
-        id="insider-modal"
-        role="dialog"
-        aria-modal="true"
-        aria-label="Inside This Issue"
-        onClick={handleOverlayClick}
-      >
-        <div className="modal">
-          <button
-            type="button"
-            className="modal-close"
-            onClick={closeModal}
-            aria-label="Close"
-          >
-            &times;
-          </button>
-          <p className="modal-label">The Insider</p>
-
-          {TOC.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="toc-item"
-              onClick={closeModal}
-            >
-              <p className="toc-title">{item.title}</p>
-              <p className="toc-desc">{item.desc}</p>
-            </a>
-          ))}
-        </div>
-      </div>
+      {/* THE INSIDER modal — dynamically imported, mounted only when
+          the user has clicked THE INSIDER (insiderOpen is true). */}
+      {insiderOpen && <InsiderModal onClose={() => setInsiderOpen(false)} />}
     </>
   );
 }
