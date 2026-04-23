@@ -13,7 +13,8 @@ const organization = {
   name: 'SimplWorks',
   legalName: 'SimplWorks.ai',
   url: SITE_URL,
-  logo: `${SITE_URL}/og-image.png`,
+  // logo: add when a real brand logo file exists (V2). Omitting is
+  // preferable to a broken reference for Google's Rich Results Test.
   founder: {
     '@type': 'Person',
     name: 'Stephanie Belote',
