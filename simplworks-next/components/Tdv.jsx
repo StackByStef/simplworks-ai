@@ -80,15 +80,11 @@ export default function Tdv() {
         >
           At Launch
         </p>
-        <p className="beat gold-first">Built and live in one week.</p>
+        <p className="beat gold-first">I can assist and recommend them.</p>
+        <p className="beat gold-first">Be built and live in one week.</p>
         <p className="beat gold-first">
-          Customers can find the business online.
-        </p>
-        <p className="beat gold-first">
-          AI assistants can find and recommend them.
-        </p>
-        <p className="beat gold-first">
-          Every lead goes directly to the owner.
+          See that customers can find the business online and that every lead
+          goes directly to the owner.
         </p>
 
         <button

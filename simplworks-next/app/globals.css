@@ -577,7 +577,7 @@ body {
   font-family: var(--font-body);
   font-style: italic;
   font-size: 1rem;
-  color: #aaa;
+  color: var(--white);
   line-height: 1.8;
   margin-bottom: 0.75rem;
 }
@@ -585,7 +585,7 @@ body {
 .testimonial-attr {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--white);
 }
 
 /* ========== TDV "What Shipped" Panel ========== */
@@ -644,8 +644,8 @@ body {
   margin-top: 2.5rem;
   padding: 12px 28px;
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--muted);
+  border: 1px solid var(--gold);
+  color: var(--gold);
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-style: italic;
@@ -654,8 +654,9 @@ body {
 }
 
 .curious-btn:hover {
+  background: var(--gold-gradient);
+  color: var(--btn-text);
   border-color: var(--gold);
-  color: var(--gold);
 }
 
 .tdv-link {
