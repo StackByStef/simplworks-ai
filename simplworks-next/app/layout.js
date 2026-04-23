@@ -62,7 +62,7 @@ const playfairItalic = Playfair_Display({
 });
 
 const DESCRIPTION =
-  'SimplWorks builds custom websites by hand, one at a time. Coded from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.';
+  'SimplWorks builds custom websites by hand, one at a time. Built by hand from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.';
 
 export const metadata = {
   metadataBase: new URL('https://simplworks.ai'),

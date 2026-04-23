@@ -123,7 +123,7 @@ export default function TheBuilder() {
           >
             SimplWorks is mine. Every line of it. And if you&apos;re a
             business owner who&apos;s been too busy working hard to notice
-            the world shifted around you, I see you. Because I was you. And
+            the game changed around you, I see you. Because I was you. And
             I&apos;m not going anywhere.
           </p>
 
@@ -264,7 +264,7 @@ export default function TheBuilder() {
 
           <p>
             What I found in there wasn&apos;t what I expected. I thought I
-            was learning business skills. I was. But the real shift was
+            was learning business skills. I was. But the real change was
             something deeper. Every day there&apos;s a lesson. Small.
             Practical. And you apply it. Not tomorrow. That day. And those
             small daily changes, making your bed, showing up on time, doing
@@ -304,15 +304,15 @@ export default function TheBuilder() {
           </p>
 
           <p>
-            And here&apos;s what I learned while I was building. The world
-            shifted. Websites aren&apos;t brochures anymore. They&apos;re
+            And here&apos;s what I learned while I was building. The game
+            changed. Websites aren&apos;t brochures anymore. They&apos;re
             not business cards. They&apos;re where people decide whether to
             trust you, buy from you, or move on. AI changed what a website
             is responsible for, and most business owners are still running
             something that was fine five years ago but doesn&apos;t work
             now. Not because they&apos;re behind. Because they were busy.
             They were doing what they do best, running their business, and
-            the ground moved under them while they were working.
+            the rules changed under them while they were working.
           </p>
 
           <p>I know that feeling. I was that person.</p>
@@ -320,8 +320,8 @@ export default function TheBuilder() {
           <p>
             Every SimplWorks site is built from scratch. No templates. No
             page builders. No recycled layouts. Every word, every page,
-            every line of code is built around one question: does this
-            make the business money? Not because there&apos;s some noble
+            every line of the site is built around one question: does
+            this make the business money? Not because there&apos;s some noble
             philosophy behind it. Because that&apos;s how you build
             something that actually works. A website in this market has one
             job, convert trust into action. If it&apos;s not doing that,
@@ -336,7 +336,7 @@ export default function TheBuilder() {
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
             SimplWorks is mine. Every line of it. And if you&apos;re a
             business owner who&apos;s been too busy working hard to notice
-            the world shifted around you, I see you. Because I was you.
+            the game changed around you, I see you. Because I was you.
             And I&apos;m not going anywhere.
           </p>
         </div>

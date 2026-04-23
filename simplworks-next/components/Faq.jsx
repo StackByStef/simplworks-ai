@@ -19,8 +19,8 @@ export default function Faq() {
             SimplWorks is a custom website studio run by Stephanie Belote, a
             20-year business operator who builds websites by hand for small
             business owners, service providers, startups, and creators. Every
-            site is coded from scratch, measured against one question, will
-            this bring you customers, and delivered in about a week.
+            site is built by hand from scratch, measured against one question,
+            will this bring you customers, and delivered in about a week.
           </p>
         </details>
 
@@ -64,7 +64,7 @@ export default function Faq() {
             site different?
           </summary>
           <p className="faq-answer">
-            No templates and no page builders. Every SimplWorks site is coded
+            No templates and no page builders. Every SimplWorks site is built
             by hand. That means the site is built specifically for the
             business, around its customer and its sale, instead of starting
             from a generic framework. The difference shows up in how the
@@ -78,7 +78,7 @@ export default function Faq() {
           <p className="faq-answer">
             Yes. Every SimplWorks website includes SEO, AEO (AI answer engine
             optimization), and GEO (generative engine optimization) built in
-            from the first line of code. It&apos;s not an add-on or upsell.
+            from the first day of the build. It&apos;s not an add-on or upsell.
             The site is built to show up in traditional search, AI answer
             engines like ChatGPT and Perplexity, and AI-generated results.
           </p>

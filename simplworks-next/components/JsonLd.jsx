@@ -29,7 +29,7 @@ const organization = {
   email: 'stephanie@simplworks.ai',
   telephone: '+1-678-617-4598',
   description:
-    'SimplWorks builds custom websites by hand, one at a time. Coded from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.',
+    'SimplWorks builds custom websites by hand, one at a time. Built by hand from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.',
 };
 
 const webPage = {
@@ -38,7 +38,7 @@ const webPage = {
   name: 'SimplWorks — Custom Websites Built by Hand',
   url: SITE_URL,
   description:
-    'SimplWorks builds custom websites by hand, one at a time. Coded from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.',
+    'SimplWorks builds custom websites by hand, one at a time. Built by hand from scratch by Stephanie Belote with SEO, AEO, and GEO built in. Knoxville, TN. Delivered in about a week.',
   inLanguage: 'en-US',
   isPartOf: {
     '@type': 'WebSite',
@@ -56,7 +56,7 @@ const faqPage = {
       name: 'What is SimplWorks?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SimplWorks is a custom website studio run by Stephanie Belote, a 20-year business operator who builds websites by hand for small business owners, service providers, startups, and creators. Every site is coded from scratch, measured against one question, will this bring you customers, and delivered in about a week.',
+        text: 'SimplWorks is a custom website studio run by Stephanie Belote, a 20-year business operator who builds websites by hand for small business owners, service providers, startups, and creators. Every site is built by hand from scratch, measured against one question, will this bring you customers, and delivered in about a week.',
       },
     },
     {
@@ -88,7 +88,7 @@ const faqPage = {
       name: 'Do you use templates or page builders, and what makes a SimplWorks site different?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No templates and no page builders. Every SimplWorks site is coded by hand. That means the site is built specifically for the business, around its customer and its sale, instead of starting from a generic framework. The difference shows up in how the site performs, how fast it loads, how easily it shows up in search and AI answers, and how well it holds up over time.',
+        text: 'No templates and no page builders. Every SimplWorks site is built by hand. That means the site is built specifically for the business, around its customer and its sale, instead of starting from a generic framework. The difference shows up in how the site performs, how fast it loads, how easily it shows up in search and AI answers, and how well it holds up over time.',
       },
     },
     {
@@ -96,7 +96,7 @@ const faqPage = {
       name: 'Does SimplWorks do SEO?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Yes. Every SimplWorks website includes SEO, AEO (AI answer engine optimization), and GEO (generative engine optimization) built in from the first line of code. It's not an add-on or upsell. The site is built to show up in traditional search, AI answer engines like ChatGPT and Perplexity, and AI-generated results.",
+        text: "Yes. Every SimplWorks website includes SEO, AEO (AI answer engine optimization), and GEO (generative engine optimization) built in from the first day of the build. It's not an add-on or upsell. The site is built to show up in traditional search, AI answer engines like ChatGPT and Perplexity, and AI-generated results.",
       },
     },
     {

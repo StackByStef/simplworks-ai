@@ -4,7 +4,7 @@ export default function TheShift() {
       <div className="section-inner">
         <p className="section-label">The Shift</p>
         <h2 className="section-heading">
-          The Game Moved While You Were Building.
+          The Game Changed While You Were Building.
         </h2>
 
         <p className="beat drop-cap-manual">
@@ -40,8 +40,8 @@ export default function TheShift() {
         </p>
 
         <p className="beat">
-          Not because you did anything wrong. Because the game moved and nobody
-          showed you how to move with it.
+          Not because you did anything wrong. Because the game changed and
+          nobody showed you the new rules.
         </p>
 
         <p className="beat">You&apos;re not behind because you failed.</p>
