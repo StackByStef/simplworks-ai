@@ -32,8 +32,7 @@ export default function Faq() {
             Stephanie Belote is the founder and builder behind <Brand />.
             She spent 20 years running and building businesses at AT&amp;T,
             First Union Bank, a staffing franchise she built from the ground
-            up, and a healthcare consulting company of her own, before
-            teaching herself to code and launching <Brand />. Every{' '}
+            up, and a healthcare consulting company of her own. Every{' '}
             <Brand /> website is built by her directly.
           </p>
         </details>
