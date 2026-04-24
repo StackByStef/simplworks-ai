@@ -41,9 +41,9 @@ export default function ReachMe() {
         </p>
 
         <div className="gold-rule-block">
-          <p className="gold-rule-label">The Friction Audit</p>
+          <p className="gold-rule-label">The Walk-Through</p>
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
-            Get a free 10-point website friction audit.
+            Get a free 10-point website walk-through.
           </p>
           <p>
             I&apos;ll review your current site against the same framework I
@@ -51,7 +51,7 @@ export default function ReachMe() {
             what to fix first.
           </p>
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
-            No call required. No pitch. Just the audit.
+            No call required. No pitch. Just the walk-through.
           </p>
         </div>
 

@@ -120,7 +120,7 @@ const faqPage = {
       name: 'How do I get started?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The fastest way to start is to scroll down to the Reach Me section and fill out the form that fits. If you have a website, request a free 10-point friction audit and I'll send it back showing what's working, what's leaking, and what to fix first. If you don't have a website yet, use the build request form and tell me what you're building. No call required, no pitch, just the work.",
+        text: "The fastest way to start is to scroll down to the Reach Me section and fill out the form that fits. If you have a website, request a free 10-point walk-through and I'll send it back showing what's working, what's leaking, and what to fix first. If you don't have a website yet, use the build request form and tell me what you're building. No call required, no pitch, just the work.",
       },
     },
   ],

@@ -1161,6 +1161,24 @@ footer .wordmark {
   margin-bottom: 1rem;
 }
 
+.footer-direct {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--body);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.footer-direct a {
+  color: var(--body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-direct a:hover {
+  color: var(--gold);
+}
+
 .footer-text {
   font-family: var(--font-body);
   font-size: 0.95rem;

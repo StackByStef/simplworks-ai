@@ -37,7 +37,7 @@ function contactMethod(email, phone) {
 }
 
 function subjectFor(requestType, method, subject) {
-  const label = requestType === 'build' ? 'BUILD' : 'AUDIT';
+  const label = requestType === 'build' ? 'BUILD' : 'WALK-THROUGH';
   const methodLabel = method === 'both' ? 'both' : method;
   return `NEW ${label} REQUEST (${methodLabel}): ${subject}`;
 }
@@ -61,7 +61,7 @@ async function sendNotification(payload) {
       : '';
 
   const body = `
-${request_type === 'build' ? 'NEW BUILD REQUEST' : 'NEW AUDIT REQUEST'} from simplworks.ai
+${request_type === 'build' ? 'NEW BUILD REQUEST' : 'NEW WALK-THROUGH REQUEST'} from simplworks.ai
 
 Name: ${name}
 Email: ${email || 'Not provided'}

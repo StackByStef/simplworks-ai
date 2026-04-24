@@ -123,8 +123,8 @@ export default function Faq() {
           <p className="faq-answer">
             The fastest way to start is to scroll down to the{' '}
             <a href="#reach">Reach Me section</a> and fill out the form that
-            fits. If you have a website, request a free 10-point friction
-            audit and I&apos;ll send it back showing what&apos;s working,
+            fits. If you have a website, request a free 10-point walk-through
+            and I&apos;ll send it back showing what&apos;s working,
             what&apos;s leaking, and what to fix first. If you don&apos;t
             have a website yet, use the build request form and tell me what
             you&apos;re building. No call required, no pitch, just the work.

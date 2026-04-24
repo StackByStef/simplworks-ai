@@ -90,7 +90,7 @@ export default function FrictionAuditModal({ onClose }) {
       className="modal-overlay open"
       role="dialog"
       aria-modal="true"
-      aria-label="Friction Audit request"
+      aria-label="Walk-Through request"
       onClick={handleOverlayClick}
     >
       <div className="modal modal-form">
@@ -107,7 +107,7 @@ export default function FrictionAuditModal({ onClose }) {
           <div className="form-thankyou">
             <p className="form-thankyou-headline">Got it.</p>
             <p className="form-thankyou-body">
-              You&apos;ll hear back from me within 24 hours with your audit.
+              You&apos;ll hear back from me within 24 hours with your walk-through.
               It&apos;ll come from{' '}
               <span className="form-thankyou-email">
                 stephanie@simplworks.ai
@@ -121,7 +121,7 @@ export default function FrictionAuditModal({ onClose }) {
           </div>
         ) : (
           <>
-            <p className="modal-label">The Friction Audit</p>
+            <p className="modal-label">The Walk-Through</p>
 
             <form
               className="form-in-modal"
