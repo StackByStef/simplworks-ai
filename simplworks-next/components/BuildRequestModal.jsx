@@ -128,13 +128,13 @@ export default function BuildRequestModal({ onClose }) {
             >
               <div className="form-field">
                 <label htmlFor="build-name" className="form-label">
-                  Your name
+                  Name
                 </label>
                 <input
                   id="build-name"
                   name="name"
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Name"
                   value={fields.name}
                   onChange={handleChange}
                   required
@@ -146,13 +146,13 @@ export default function BuildRequestModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="build-email" className="form-label">
-                  Your email
+                  Email
                 </label>
                 <input
                   id="build-email"
                   name="email"
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Email"
                   value={fields.email}
                   onChange={handleChange}
                   autoComplete="email"
@@ -166,13 +166,13 @@ export default function BuildRequestModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="build-phone" className="form-label">
-                  Your phone
+                  Phone
                 </label>
                 <input
                   id="build-phone"
                   name="phone"
                   type="tel"
-                  placeholder="Your phone"
+                  placeholder="Phone"
                   value={fields.phone}
                   onChange={handleChange}
                   autoComplete="tel"
@@ -187,13 +187,13 @@ export default function BuildRequestModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="build-biz" className="form-label">
-                  Your business name
+                  Business name
                 </label>
                 <input
                   id="build-biz"
                   name="business_name"
                   type="text"
-                  placeholder="Your business name"
+                  placeholder="Business name"
                   value={fields.business_name}
                   onChange={handleChange}
                   required

@@ -130,13 +130,13 @@ export default function FrictionAuditModal({ onClose }) {
             >
               <div className="form-field">
                 <label htmlFor="audit-name" className="form-label">
-                  Your name
+                  Name
                 </label>
                 <input
                   id="audit-name"
                   name="name"
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Name"
                   value={fields.name}
                   onChange={handleChange}
                   required
@@ -148,13 +148,13 @@ export default function FrictionAuditModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="audit-email" className="form-label">
-                  Your email
+                  Email
                 </label>
                 <input
                   id="audit-email"
                   name="email"
                   type="email"
-                  placeholder="Your email"
+                  placeholder="Email"
                   value={fields.email}
                   onChange={handleChange}
                   autoComplete="email"
@@ -168,13 +168,13 @@ export default function FrictionAuditModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="audit-phone" className="form-label">
-                  Your phone
+                  Phone
                 </label>
                 <input
                   id="audit-phone"
                   name="phone"
                   type="tel"
-                  placeholder="Your phone"
+                  placeholder="Phone"
                   value={fields.phone}
                   onChange={handleChange}
                   autoComplete="tel"
@@ -189,13 +189,13 @@ export default function FrictionAuditModal({ onClose }) {
 
               <div className="form-field">
                 <label htmlFor="audit-url" className="form-label">
-                  Your website
+                  Website
                 </label>
                 <input
                   id="audit-url"
                   name="website_url"
                   type="text"
-                  placeholder="yourbusiness.com"
+                  placeholder="business.com"
                   value={fields.website_url}
                   onChange={handleChange}
                   required
