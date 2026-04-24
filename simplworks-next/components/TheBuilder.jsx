@@ -62,31 +62,24 @@ export default function TheBuilder() {
             One New Mission.
           </h2>
 
-          <p className="beat drop-cap">
-            Not long ago, I was sitting on a sofa with cold coffee, staring
-            into the woods, wondering how I got so quiet. I was 53. And the
-            thing is, I&apos;d been building things my whole life.
+          <p className="beat drop-cap-manual">
+            <span className="dc-letter">N</span>
+            <span className="dc-lines">
+              ot long ago, I was sitting on a sofa with cold coffee,
+              wondering how I got so quiet. I was 53. And I&apos;d been
+              building things my whole life.
+            </span>
           </p>
 
           <p className="beat">
-            AT&amp;T. First Union Bank. A staffing franchise I stood up from
+            AT&amp;T. First Union Bank. A staffing franchise I built from
             nothing. A healthcare consulting company I built from a 1099 gig
-            into a real business. I was doing work in my twenties that most
-            people don&apos;t touch until they&apos;re 40.
+            into a real business. Then COVID killed the company. I went
+            back to work for someone else.
           </p>
 
           <p className="beat">
-            Then COVID killed my company. I had the solution and no way to
-            get through the door. By mid-2021, it was gone.
-          </p>
-
-          <p className="beat">
-            So I went back to work for someone else. Insurance marketing.
-            Learned the industry. Did the job.
-          </p>
-
-          <p className="beat">
-            And somewhere in all those years of building for other people,
+            Somewhere in all those years of building for other people,
             starting over, rebuilding, starting over again, I became
             invisible.
           </p>
@@ -98,12 +91,6 @@ export default function TheBuilder() {
               yours got quieter.
             </p>
           </div>
-
-          <p className="beat">
-            So I joined an online learning platform. I didn&apos;t know what
-            I&apos;d learn. I just knew I had to move. And I haven&apos;t
-            missed a single day since.
-          </p>
 
           <p className="beat">
             I have dyscalculia. I used my laptop for emails. That&apos;s it.
@@ -119,7 +106,7 @@ export default function TheBuilder() {
           </div>
 
           <p
-            className="beat"
+            className="beat-strong"
             style={{ color: 'var(--white)', fontWeight: 700 }}
           >
             <Brand /> is mine. Every line of it. And if you&apos;re a

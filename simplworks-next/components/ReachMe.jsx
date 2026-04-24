@@ -43,15 +43,11 @@ export default function ReachMe() {
         <div className="gold-rule-block">
           <p className="gold-rule-label">The Walk-Through</p>
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
-            Get a free 10-point website walk-through.
-          </p>
-          <p>
-            I&apos;ll review your current site against the same framework I
-            use for every client. What&apos;s working, what&apos;s leaking,
-            what to fix first.
+            A free 10-point review of your current site. What&apos;s
+            working, what&apos;s leaking, what to fix first.
           </p>
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
-            No call required. No pitch. Just the walk-through.
+            No call. No pitch. Just the walk-through.
           </p>
         </div>
 

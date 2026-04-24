@@ -33,6 +33,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><a href="#shift">The Shift</a></li>
             <li><a href="#solution">The Fix</a></li>
+            <li><a href="#process">The Process</a></li>
             <li><a href="#reach">The Walk-Through</a></li>
             <li><a href="#stephanie">The Builder</a></li>
             <li><a href="#faq">FAQ</a></li>
