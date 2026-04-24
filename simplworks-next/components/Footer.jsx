@@ -11,15 +11,19 @@ export default function Footer() {
           </span>
           <p className="footer-tagline">Custom websites, built by hand.</p>
           <p className="footer-location">Knoxville, TN</p>
+          <p className="footer-label footer-label-reach">Reach Me</p>
+          <a href="#reach" className="footer-reach-link">
+            Send a message &rarr;
+          </a>
         </div>
 
         <div className="footer-col footer-col-direct">
           <p className="footer-label">Skip the Form</p>
-          <p className="footer-phone">
-            <a href="tel:+16786174598">678.617.4598</a>
-          </p>
           <p className="footer-email">
             <a href="mailto:stephanie@simplworks.ai">stephanie@simplworks.ai</a>
+          </p>
+          <p className="footer-phone">
+            <a href="tel:+16786174598">678.617.4598</a>
           </p>
           <p className="footer-direct-caption">Real person. Real response.</p>
         </div>

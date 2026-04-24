@@ -1174,12 +1174,19 @@ footer {
   align-items: start;
 }
 
+/* Each column is a flex container that horizontally centers its
+   children as blocks (align-items: center), while the children
+   themselves keep their internal text left-aligned. Net effect:
+   the content block of each column is centered within the grid
+   cell, but item lists (e.g. Inside nav, Reach Me anchor) stay
+   flush-left within the block so they line up vertically. */
 .footer-col {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.footer-col-identity {
+.footer-col > * {
   text-align: left;
 }
 
@@ -1207,10 +1214,6 @@ footer {
   margin: 0;
 }
 
-.footer-col-direct {
-  text-align: center;
-}
-
 .footer-label {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1221,33 +1224,61 @@ footer {
   margin: 0 0 0.9rem;
 }
 
-.footer-phone {
+.footer-label-reach {
+  margin-top: 1.5rem;
+}
+
+.footer-reach-link {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-reach-link:hover {
+  color: var(--gold);
+}
+
+/* Primary contact (email) — larger, bright white */
+.footer-email {
   font-family: var(--font-body);
   font-size: 1.3rem;
   font-weight: 700;
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.4rem;
   line-height: 1.2;
-}
-
-.footer-email {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  margin: 0 0 0.9rem;
-  line-height: 1.3;
   word-break: break-word;
 }
 
-.footer-phone a,
 .footer-email a {
   color: var(--white);
   text-decoration: none;
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.footer-phone a:hover,
 .footer-email a:hover {
   color: var(--gold);
   text-shadow: 0 0 14px rgba(227, 197, 113, 0.35);
+}
+
+/* Secondary contact (phone) — smaller, slightly muted */
+.footer-phone {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 0.9rem;
+  line-height: 1.3;
+}
+
+.footer-phone a {
+  color: var(--body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-phone a:hover {
+  color: var(--gold);
 }
 
 .footer-direct-caption {
@@ -1258,10 +1289,6 @@ footer {
   color: var(--muted);
   margin: 0;
   line-height: 1.5;
-}
-
-.footer-col-links {
-  text-align: right;
 }
 
 .footer-links {
@@ -1293,7 +1320,8 @@ footer {
 
 .footer-phone a:focus-visible,
 .footer-email a:focus-visible,
-.footer-links a:focus-visible {
+.footer-links a:focus-visible,
+.footer-reach-link:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
   border-radius: 2px;
@@ -1303,13 +1331,17 @@ footer {
   max-width: 1200px;
   margin: 3rem auto 2rem;
   height: 1px;
-  background: rgba(227, 197, 113, 0.3);
+  background: rgba(227, 197, 113, 0.5);
 }
 
+/* Copyright contrast: spec said --dim → --muted, but --muted was
+   already in place from the last refactor. Bumping one step further
+   to --body (#b4b4b4) to deliver the requested "reads clearly
+   without straining" effect. */
 .footer-text {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--body);
   text-align: center;
   margin: 0;
 }
@@ -1364,9 +1396,8 @@ footer {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .footer-col-identity,
-  .footer-col-direct,
-  .footer-col-links {
+  /* Mobile: override desktop flush-left children → centered text */
+  .footer-col > * {
     text-align: center;
   }
   .footer-col-direct { order: 1; }
