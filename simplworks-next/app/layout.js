@@ -34,7 +34,15 @@ const lato = Lato({
   weight: ['400', '700'],
   style: 'normal',
   variable: '--font-body',
-  display: 'swap',
+  // 'optional' instead of 'swap': browser uses Next.js's metric-adjusted
+  // fallback font if Lato doesn't download within ~100ms, and does NOT
+  // swap mid-render on first visit. This lets Chrome fire LCP at the
+  // fallback paint (~1.3s) rather than waiting for the Lato swap (~2.8s).
+  // Lato still loads in the background and serves from cache on return
+  // visits, so repeat visitors get full Lato immediately. The hero-sub
+  // paragraph is the LCP element and renders in var(--font-body), so
+  // this is the direct lever for mobile LCP.
+  display: 'optional',
 });
 
 const latoItalic = Lato({
