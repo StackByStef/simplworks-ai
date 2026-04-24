@@ -75,10 +75,11 @@ export default function TheBuilder() {
           </p>
 
           <p className="beat">
-            AT&amp;T. First Union Bank. A staffing franchise I built from
-            nothing. A healthcare consulting company I built from a 1099 gig
-            into a real business. Then COVID killed the company. I went
-            back to work for someone else.
+            An international staffing company where AT&amp;T and First Union
+            Bank were my biggest accounts. A Norrell staffing franchise I
+            helped open for two local owners. A healthcare consulting
+            company I built from a 1099 gig into a real business. Then COVID
+            killed the company. I went back to work for someone else.
           </p>
 
           <p className="beat">
@@ -191,17 +192,19 @@ export default function TheBuilder() {
           </p>
 
           <p>
-            Corporate called. I moved to a national account manager role
-            for First Union Bank, working under the CEO who took that
-            company public. I was doing work at 27 that most people
-            don&apos;t touch until they&apos;re 40.
+            Corporate called. I was promoted to national account manager,
+            running the First Union Bank account and working directly with
+            the CEO who took that company public. I was doing work at 27
+            that most people don&apos;t touch until they&apos;re 40.
           </p>
 
           <p>
-            Then life shifted. I moved to Gainesville, Georgia, consulted
-            for a Norrell staffing franchise, got their entire operation
-            stood up and running, and stepped away to raise my kids for 14
-            years.
+            Then life shifted. I moved to Gainesville, Georgia, where two
+            local businessmen had just bought a Norrell staffing franchise
+            and landed the Gwinnett County government contract. They needed
+            someone to open the franchise for them, quickly. I was hired as
+            their marketing consultant, got the operation stood up and
+            running, and stepped away to raise my kids for 14 years.
           </p>
 
           <p>

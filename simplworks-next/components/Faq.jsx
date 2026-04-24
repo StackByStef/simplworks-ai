@@ -30,10 +30,12 @@ export default function Faq() {
           <summary className="faq-question">Who is Stephanie Belote?</summary>
           <p className="faq-answer">
             Stephanie Belote is the founder and builder behind <Brand />.
-            She spent 20 years running and building businesses at AT&amp;T,
-            First Union Bank, a staffing franchise she built from the ground
-            up, and a healthcare consulting company of her own. Every{' '}
-            <Brand /> website is built by her directly.
+            She spent 20 years in business &mdash; at an international
+            staffing company where AT&amp;T and First Union Bank were her
+            major accounts, as marketing consultant opening a Norrell
+            staffing franchise for two local owners, and running a
+            healthcare consulting company of her own. Every <Brand />{' '}
+            website is built by her directly.
           </p>
         </details>
 

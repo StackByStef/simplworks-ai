@@ -64,7 +64,7 @@ const faqPage = {
       name: 'Who is Stephanie Belote?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Stephanie Belote is the founder and builder behind SimplWorks. She spent 20 years running and building businesses at AT&T, First Union Bank, a staffing franchise she built from the ground up, and a healthcare consulting company of her own. Every SimplWorks website is built by her directly.',
+        text: 'Stephanie Belote is the founder and builder behind SimplWorks. She spent 20 years in business — at an international staffing company where AT&T and First Union Bank were her major accounts, as marketing consultant opening a Norrell staffing franchise for two local owners, and running a healthcare consulting company of her own. Every SimplWorks website is built by her directly.',
       },
     },
     {
