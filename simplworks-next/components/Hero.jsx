@@ -173,17 +173,9 @@ export default function Hero() {
           </p>
 
           <p className="hero-sub">
-            The game changed while most business owners
+            The game changed while most business owners{' '}
             <br />
-            were busy running their business.
-          </p>
-
-          {/* DC Change 1 — Hero filter line (Belief 2 self-select).
-              Now the last beat before THE INSIDER button per metaphor
-              sweep item 2 (hero-callout removed). */}
-          <p className="hero-filter">
-            For business owners who&apos;ve built something real, and are
-            tired of a website that&apos;s costing them customers.
+            {' '}were busy running their business.
           </p>
 
           <button

@@ -12,8 +12,11 @@ export default function TheProcess() {
         <p className="section-label">The Process</p>
         <h2 className="section-heading">How the Work Gets Done.</h2>
 
-        <p className="beat drop-cap">
-          Every SimplWorks project follows the same path.
+        <p className="beat drop-cap-manual">
+          <span className="dc-letter">E</span>
+          <span className="dc-lines">
+            very SimplWorks project follows the same path.
+          </span>
         </p>
 
         <p className="beat">

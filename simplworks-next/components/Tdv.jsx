@@ -25,9 +25,12 @@ export default function Tdv() {
           Its Weight in One Week.
         </h2>
 
-        <p className="beat drop-cap">
-          Emory and Ellie had spent months planning the launch of Top Dog
-          Vending.
+        <p className="beat drop-cap-manual">
+          <span className="dc-letter">E</span>
+          <span className="dc-lines">
+            mory and Ellie had spent months planning the launch of Top Dog
+            Vending.
+          </span>
         </p>
 
         <p className="beat">The business was ready.</p>

@@ -1220,14 +1220,8 @@ footer .wordmark {
   .hero-sub {
     font-size: 1.1rem;
   }
-  .hero-sub br {
-    display: none;
-  }
   .hero-callout {
     font-size: 1.1rem;
-  }
-  .hero-filter {
-    font-size: 0.9rem;
   }
 
   .section-label {

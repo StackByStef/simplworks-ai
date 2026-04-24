@@ -30,8 +30,11 @@ export default function TheFix() {
           you customers?
         </p>
 
-        <p className="beat drop-cap">
-          Customers find you before they find your competitor.
+        <p className="beat drop-cap-manual">
+          <span className="dc-letter">C</span>
+          <span className="dc-lines">
+            ustomers find you before they find your competitor.
+          </span>
         </p>
 
         <p className="beat">
