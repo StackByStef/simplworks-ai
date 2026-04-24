@@ -56,7 +56,7 @@ const faqPage = {
       name: 'What is SimplWorks?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SimplWorks is a custom website studio run by Stephanie Belote, a 20-year business operator who builds websites by hand for business owners who need their site to actually bring in customers. Every site is built by hand from scratch, measured against one question, will this bring you customers, and delivered in about a week.',
+        text: 'SimplWorks is Stephanie Belote, a 20-year business operator who builds custom websites and AI automations by hand for business owners, service providers, startups, and creators. Every build is measured against one question, will this bring you customers, and delivered in about a week.',
       },
     },
     {
