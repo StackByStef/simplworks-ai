@@ -1147,6 +1147,17 @@ details[open] .faq-question::after {
   }
 }
 
+/* ========== INLINE BRAND ========== */
+.brand-inline-simpl {
+  color: var(--white);
+  font-weight: inherit;
+}
+
+.brand-inline-works {
+  color: var(--gold);
+  font-weight: inherit;
+}
+
 /* ========== FOOTER (Editorial V1) ========== */
 footer {
   border-top: 1px solid var(--border);

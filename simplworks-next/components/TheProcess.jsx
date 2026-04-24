@@ -1,3 +1,5 @@
+import Brand from './Brand';
+
 /**
  * THE PROCESS — Belief 4 (Scope) + Belief 3 reinforcement (Mechanism specifics)
  *
@@ -15,7 +17,7 @@ export default function TheProcess() {
         <p className="beat drop-cap-manual">
           <span className="dc-letter">E</span>
           <span className="dc-lines">
-            very SimplWorks project follows the same path.
+            very <Brand /> project follows the same path.
           </span>
         </p>
 

@@ -1,3 +1,5 @@
+import Brand from './Brand';
+
 /**
  * FAQ — Belief 7 (Objection Handling)
  *
@@ -16,7 +18,7 @@ export default function Faq() {
         <details className="faq-item">
           <summary className="faq-question">What is SimplWorks?</summary>
           <p className="faq-answer">
-            SimplWorks is a custom website studio run by Stephanie Belote, a
+            <Brand /> is a custom website studio run by Stephanie Belote, a
             20-year business operator who builds websites by hand for business
             owners who need their site to actually bring in customers. Every
             site is built by hand from scratch, measured against one question,
@@ -27,19 +29,19 @@ export default function Faq() {
         <details className="faq-item">
           <summary className="faq-question">Who is Stephanie Belote?</summary>
           <p className="faq-answer">
-            Stephanie Belote is the founder and builder behind SimplWorks.
+            Stephanie Belote is the founder and builder behind <Brand />.
             She spent 20 years running and building businesses at AT&amp;T,
             First Union Bank, a staffing franchise she built from the ground
             up, and a healthcare consulting company of her own, before
-            teaching herself to code and launching SimplWorks. Every
-            SimplWorks website is built by her directly.
+            teaching herself to code and launching <Brand />. Every{' '}
+            <Brand /> website is built by her directly.
           </p>
         </details>
 
         <details className="faq-item">
           <summary className="faq-question">Where is SimplWorks based?</summary>
           <p className="faq-answer">
-            SimplWorks is based in Knoxville, Tennessee. Stephanie works with
+            <Brand /> is based in Knoxville, Tennessee. Stephanie works with
             business owners across the country. Every project is handled
             remotely, end to end, with no travel required from the client.
           </p>
@@ -50,7 +52,7 @@ export default function Faq() {
             How long does a SimplWorks build take?
           </summary>
           <p className="faq-answer">
-            Most SimplWorks websites are built and live in about one week.
+            Most <Brand /> websites are built and live in about one week.
             The timeline includes a planning conversation to map the site to
             the business, the full build, and launch. Larger or multi-page
             builds get their own timeline, scoped at the start so there are
@@ -64,7 +66,7 @@ export default function Faq() {
             site different?
           </summary>
           <p className="faq-answer">
-            No templates and no page builders. Every SimplWorks site is built
+            No templates and no page builders. Every <Brand /> site is built
             by hand. That means the site is built specifically for the
             business, around its customer and its sale, instead of starting
             from a generic framework. The difference shows up in how the
@@ -76,7 +78,7 @@ export default function Faq() {
         <details className="faq-item">
           <summary className="faq-question">Does SimplWorks do SEO?</summary>
           <p className="faq-answer">
-            Yes. Every SimplWorks website includes SEO, AEO (AI answer engine
+            Yes. Every <Brand /> website includes SEO, AEO (AI answer engine
             optimization), and GEO (generative engine optimization) built in
             from the first day of the build. It&apos;s not an add-on or upsell.
             The site is built to show up in traditional search, AI answer
@@ -89,12 +91,12 @@ export default function Faq() {
             What happens after the site launches?
           </summary>
           <p className="faq-answer">
-            Every SimplWorks client receives full documentation of what was
+            Every <Brand /> client receives full documentation of what was
             built, why it was built that way, and how to maintain it. But a
             website is not a finished product the day it launches. Content
             ages, search rankings shift, performance drifts, and the site
             you paid for slowly stops working if nobody maintains it. Most
-            clients continue working with SimplWorks after launch through a
+            clients continue working with <Brand /> after launch through a
             monthly care plan that covers updates, content changes,
             performance monitoring, and ongoing optimization. No lock-in, no
             long contracts, just the work that keeps the site bringing in
@@ -111,7 +113,7 @@ export default function Faq() {
             Big agencies charge tens of thousands of dollars, take months to
             deliver, and often disappear after launch. DIY platforms like
             Wix and Squarespace lock the business into templates, slow page
-            speeds, and limited search visibility. SimplWorks is a custom
+            speeds, and limited search visibility. <Brand /> is a custom
             build, handled by one operator who has run real businesses,
             delivered in about a week, at a price that makes sense for
             owners who need the site to actually bring in customers.

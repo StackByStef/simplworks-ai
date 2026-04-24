@@ -12,6 +12,7 @@
  */
 
 import { useEffect, useState } from 'react';
+import Brand from './Brand';
 
 export default function TheBuilder() {
   const [overlayOpen, setOverlayOpen] = useState(false);
@@ -121,7 +122,7 @@ export default function TheBuilder() {
             className="beat"
             style={{ color: 'var(--white)', fontWeight: 700 }}
           >
-            SimplWorks is mine. Every line of it. And if you&apos;re a
+            <Brand /> is mine. Every line of it. And if you&apos;re a
             business owner who&apos;s been too busy working hard to notice
             the game changed around you, I see you. Because I was you. And
             I&apos;m not going anywhere.
@@ -318,7 +319,7 @@ export default function TheBuilder() {
           <p>I know that feeling. I was that person.</p>
 
           <p>
-            Every SimplWorks site is built from scratch. No templates. No
+            Every <Brand /> site is built from scratch. No templates. No
             page builders. No recycled layouts. Every word, every page,
             every line of the site is built around one question: does
             this make the business money? Not because there&apos;s some noble
@@ -334,7 +335,7 @@ export default function TheBuilder() {
           </p>
 
           <p style={{ color: 'var(--white)', fontWeight: 700 }}>
-            SimplWorks is mine. Every line of it. And if you&apos;re a
+            <Brand /> is mine. Every line of it. And if you&apos;re a
             business owner who&apos;s been too busy working hard to notice
             the game changed around you, I see you. Because I was you.
             And I&apos;m not going anywhere.

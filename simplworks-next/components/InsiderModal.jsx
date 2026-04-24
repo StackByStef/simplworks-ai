@@ -15,10 +15,12 @@
  *             knowledge of insiderOpen state.
  */
 
+import Brand from './Brand';
+
 const TOC = [
   { href: '#shift', title: 'The Shift', desc: 'What changed while you were building your business' },
   { href: '#solution', title: 'The Fix', desc: 'Get your website working as hard as you do' },
-  { href: '#tdv', title: 'Top Dog Vending', desc: 'A SimplWorks case study' },
+  { href: '#tdv', title: 'Top Dog Vending', desc: <>A <Brand /> case study</> },
   { href: '#process', title: 'The Process', desc: 'How the work gets done' },
   { href: '#stephanie', title: 'The Builder', desc: '20 years in business. One new mission.' },
   { href: '#reach', title: 'Reach Me', desc: 'Start the conversation' },

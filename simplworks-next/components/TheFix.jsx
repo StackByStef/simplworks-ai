@@ -1,3 +1,5 @@
+import Brand from './Brand';
+
 /**
  * THE FIX — Belief 3 (Solution/Mechanism) + partial Belief 4 (Scope setup)
  *
@@ -17,7 +19,7 @@ export default function TheFix() {
 
         {/* DC Change 2 — Definition block (entity anchor) */}
         <p className="beat" style={{ color: 'var(--white)', fontWeight: 700 }}>
-          SimplWorks builds custom websites, one at a time, by hand. No
+          <Brand /> builds custom websites, one at a time, by hand. No
           templates. No page builders. Every site is built by Stephanie
           Belote, a 20-year business operator who builds websites the way a
           business owner needs them built: around the customer, around the
