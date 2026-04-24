@@ -11,9 +11,8 @@ export default function Footer() {
           </span>
           <p className="footer-tagline">Custom websites, built by hand.</p>
           <p className="footer-location">Knoxville, TN</p>
-          <p className="footer-label footer-label-reach">Reach Me</p>
-          <a href="#reach" className="footer-reach-link">
-            Send a message &rarr;
+          <a href="#reach" className="footer-label footer-label-reach">
+            Reach Me
           </a>
         </div>
 

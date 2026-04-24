@@ -1228,17 +1228,17 @@ footer {
   margin-top: 1.5rem;
 }
 
-.footer-reach-link {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.95rem;
-  color: var(--body);
+/* REACH ME is the clickable link itself (no separate "Send a message"
+   line beneath it) — scrolls to #reach on click. */
+a.footer-label-reach {
   text-decoration: none;
-  transition: color 0.2s ease;
+  cursor: pointer;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.footer-reach-link:hover {
-  color: var(--gold);
+a.footer-label-reach:hover {
+  color: var(--gold-bright);
+  text-shadow: 0 0 12px rgba(227, 197, 113, 0.4);
 }
 
 /* Primary contact (email) — larger, bright white */
@@ -1321,7 +1321,7 @@ footer {
 .footer-phone a:focus-visible,
 .footer-email a:focus-visible,
 .footer-links a:focus-visible,
-.footer-reach-link:focus-visible {
+a.footer-label-reach:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
   border-radius: 2px;
