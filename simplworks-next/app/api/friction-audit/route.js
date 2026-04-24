@@ -13,6 +13,7 @@
  *     phone?: string                    (email OR phone required)
  *     website_url?: string              (required for audit, ignored for build)
  *     business_name?: string            (required for build, ignored for audit)
+ *     project_description?: string      (optional for build, ignored for audit)
  *   }
  *
  * Response:
@@ -47,12 +48,17 @@ async function sendNotification(payload) {
     return;
   }
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const { request_type, name, email, phone, website_url, business_name } = payload;
+  const { request_type, name, email, phone, website_url, business_name, project_description } = payload;
 
   const method = contactMethod(email, phone);
   const subjectSource =
     request_type === 'build' ? business_name : website_url;
   const subject = subjectFor(request_type, method, subjectSource);
+
+  const projectDescriptionSection =
+    request_type === 'build' && project_description
+      ? `\nProject description:\n${project_description}\n`
+      : '';
 
   const body = `
 ${request_type === 'build' ? 'NEW BUILD REQUEST' : 'NEW AUDIT REQUEST'} from simplworks.ai
@@ -63,7 +69,7 @@ Phone: ${phone || 'Not provided'}
 ${request_type === 'audit' ? `Website URL: ${website_url}` : `Business: ${business_name}`}
 Request type: ${request_type}
 Received: ${new Date().toISOString()}
-
+${projectDescriptionSection}
 ${email ? `Reply to the prospect at: ${email}` : ''}
   `.trim();
 
@@ -100,6 +106,7 @@ export async function POST(request) {
       phone: rawPhone,
       website_url: rawUrl,
       business_name: rawBiz,
+      project_description: rawDesc,
     } = body || {};
 
     if (request_type !== 'audit' && request_type !== 'build') {
@@ -138,6 +145,7 @@ export async function POST(request) {
 
     let website_url = null;
     let business_name = null;
+    let project_description = null;
 
     if (request_type === 'audit') {
       if (!rawUrl || typeof rawUrl !== 'string' || rawUrl.trim().length === 0) {
@@ -155,6 +163,9 @@ export async function POST(request) {
         );
       }
       business_name = rawBiz.trim();
+      if (rawDesc && typeof rawDesc === 'string' && rawDesc.trim().length > 0) {
+        project_description = rawDesc.trim();
+      }
     }
 
     const supabase = getSupabase();
@@ -166,6 +177,7 @@ export async function POST(request) {
         phone,
         website_url,
         business_name,
+        project_description,
         request_type,
       });
 
@@ -187,6 +199,7 @@ export async function POST(request) {
       phone,
       website_url,
       business_name,
+      project_description,
     }).catch((err) => console.error('Notification error:', err));
 
     return Response.json({ ok: true });

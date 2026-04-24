@@ -56,7 +56,7 @@ const faqPage = {
       name: 'What is SimplWorks?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'SimplWorks is a custom website studio run by Stephanie Belote, a 20-year business operator who builds websites by hand for small business owners, service providers, startups, and creators. Every site is built by hand from scratch, measured against one question, will this bring you customers, and delivered in about a week.',
+        text: 'SimplWorks is a custom website studio run by Stephanie Belote, a 20-year business operator who builds websites by hand for business owners who need their site to actually bring in customers. Every site is built by hand from scratch, measured against one question, will this bring you customers, and delivered in about a week.',
       },
     },
     {
@@ -120,7 +120,7 @@ const faqPage = {
       name: 'How do I get started?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "The fastest way to start is to request a free 10-point website friction audit. Send your current website URL to stephanie@simplworks.ai and you will receive an audit back showing what's working, what's leaking, and what to fix first. No call required, no pitch, just the audit.",
+        text: "The fastest way to start is to scroll down to the Reach Me section and fill out the form that fits. If you have a website, request a free 10-point friction audit and I'll send it back showing what's working, what's leaking, and what to fix first. If you don't have a website yet, use the build request form and tell me what you're building. No call required, no pitch, just the work.",
       },
     },
   ],

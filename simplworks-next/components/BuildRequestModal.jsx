@@ -14,6 +14,7 @@ export default function BuildRequestModal({ onClose }) {
     email: '',
     phone: '',
     business_name: '',
+    project_description: '',
   });
   const [status, setStatus] = useState('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -197,6 +198,21 @@ export default function BuildRequestModal({ onClose }) {
                   onChange={handleChange}
                   required
                   autoComplete="organization"
+                  className="form-input"
+                  disabled={status === 'submitting'}
+                />
+              </div>
+
+              <div className="form-field">
+                <label htmlFor="build-desc" className="form-label">
+                  What are you building?
+                </label>
+                <textarea
+                  id="build-desc"
+                  name="project_description"
+                  placeholder="A few sentences about your business, what you sell, who your customers are. Whatever you want me to know."
+                  value={fields.project_description}
+                  onChange={handleChange}
                   className="form-input"
                   disabled={status === 'submitting'}
                 />

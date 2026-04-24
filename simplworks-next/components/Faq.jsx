@@ -17,8 +17,8 @@ export default function Faq() {
           <summary className="faq-question">What is SimplWorks?</summary>
           <p className="faq-answer">
             SimplWorks is a custom website studio run by Stephanie Belote, a
-            20-year business operator who builds websites by hand for small
-            business owners, service providers, startups, and creators. Every
+            20-year business operator who builds websites by hand for business
+            owners who need their site to actually bring in customers. Every
             site is built by hand from scratch, measured against one question,
             will this bring you customers, and delivered in about a week.
           </p>
@@ -121,14 +121,13 @@ export default function Faq() {
         <details className="faq-item">
           <summary className="faq-question">How do I get started?</summary>
           <p className="faq-answer">
-            The fastest way to start is to request a free 10-point website
-            friction audit. Send your current website URL to{' '}
-            <a href="mailto:stephanie@simplworks.ai?subject=Friction%20Audit%20Request">
-              stephanie@simplworks.ai
-            </a>{' '}
-            and you will receive an audit back showing what&apos;s working,
-            what&apos;s leaking, and what to fix first. No call required, no
-            pitch, just the audit.
+            The fastest way to start is to scroll down to the{' '}
+            <a href="#reach">Reach Me section</a> and fill out the form that
+            fits. If you have a website, request a free 10-point friction
+            audit and I&apos;ll send it back showing what&apos;s working,
+            what&apos;s leaking, and what to fix first. If you don&apos;t
+            have a website yet, use the build request form and tell me what
+            you&apos;re building. No call required, no pitch, just the work.
           </p>
         </details>
       </div>

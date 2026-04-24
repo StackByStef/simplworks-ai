@@ -835,6 +835,13 @@ body {
   cursor: wait;
 }
 
+textarea.form-input {
+  min-height: 120px;
+  line-height: 1.5;
+  resize: vertical;
+  padding: 14px 16px;
+}
+
 .form-caption {
   font-family: var(--font-body);
   font-style: italic;
