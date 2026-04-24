@@ -79,7 +79,7 @@ export default function Footer() {
           href="#top"
           onClick={handleTopClick}
           className="footer-mark-link footer-mark-link-inline"
-          aria-label="SimplWorks — back to top"
+          aria-label="SimplWorks.ai — back to top"
         >
           <span className="wordmark-simpl">Simpl</span>
           <span className="wordmark-works">Works</span>
