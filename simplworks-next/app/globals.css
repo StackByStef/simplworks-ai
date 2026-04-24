@@ -1320,20 +1320,19 @@ a.footer-label-reach:hover {
   line-height: 1.5;
 }
 
-/* INSIDE column inner wrapper — inline-block so it shrink-wraps
-   to the widest link and centers within the column. Label + list
-   share the same left edge because text-align is left inside the
-   wrapper. */
-.footer-links-wrap {
-  display: inline-block;
-  text-align: left;
+/* Inside column: INSIDE label + every link center-aligned under
+   the label on both desktop and mobile. Higher specificity than
+   .footer-col > * { text-align: left } so this column overrides
+   the page-wide left-alignment default for footer column children. */
+.footer-col.footer-col-links > * {
+  text-align: center;
 }
 
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-links li {

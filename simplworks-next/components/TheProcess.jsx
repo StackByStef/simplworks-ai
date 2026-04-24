@@ -44,10 +44,15 @@ export default function TheProcess() {
           <p className="beat drop-cap-manual">
             <span className="dc-letter">E</span>
             <span className="dc-lines">
-              very <Brand /> project follows the same path.
-              <br />
-              No surprises. No scope creep.
+              very <Brand /> project follows the same&nbsp;path.
             </span>
+          </p>
+
+          <p
+            className="beat"
+            style={{ color: 'var(--white)', fontWeight: 700 }}
+          >
+            No surprises. No scope creep.
           </p>
 
           <div className="gold-rule-block">

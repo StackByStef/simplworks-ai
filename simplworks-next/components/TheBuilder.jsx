@@ -66,9 +66,12 @@ export default function TheBuilder() {
             <span className="dc-letter">N</span>
             <span className="dc-lines">
               ot long ago, I was sitting on a sofa with cold coffee,
-              wondering how I got so quiet. I was 53. And I&apos;d been
-              building things my whole life.
+              wondering how I got so quiet.
             </span>
+          </p>
+
+          <p className="beat">
+            I was 53. And I&apos;d been building things my whole life.
           </p>
 
           <p className="beat">

@@ -41,7 +41,9 @@ export default function TheFix() {
           <div className="section-divider"></div>
           <p className="section-label">The Fix</p>
           <h2 className="section-heading">
-            Get Your Website Working as Hard as You Do.
+            Get Your Website Working.
+            <br />
+            As Hard as You Do.
           </h2>
 
           {/* Mechanism pull-quote — verbatim. Entity-anchor definition
@@ -55,10 +57,13 @@ export default function TheFix() {
           <p className="beat drop-cap-manual">
             <span className="dc-letter">C</span>
             <span className="dc-lines">
-              ustomers find you before they find your competitor. Not
-              because you chased them. Because when they searched for what
-              you do, your business was the one that showed up.
+              ustomers find you before they find your competitor.
             </span>
+          </p>
+
+          <p className="beat">
+            Not because you chased them. Because when they searched for
+            what you do, your business was the one that showed up.
           </p>
 
           <p className="beat">

@@ -59,17 +59,15 @@ export default function Footer() {
         </div>
 
         <div className="footer-col footer-col-links">
-          <div className="footer-links-wrap">
-            <p className="footer-label">Inside</p>
-            <ul className="footer-links">
-              <li><a href="#shift">The Shift</a></li>
-              <li><a href="#solution">The Fix</a></li>
-              <li><a href="#process">The Process</a></li>
-              <li><a href="#reach">The Walk-Through</a></li>
-              <li><a href="#stephanie">The Builder</a></li>
-              <li><a href="#faq">FAQ</a></li>
-            </ul>
-          </div>
+          <p className="footer-label">Inside</p>
+          <ul className="footer-links">
+            <li><a href="#shift">The Shift</a></li>
+            <li><a href="#solution">The Fix</a></li>
+            <li><a href="#process">The Process</a></li>
+            <li><a href="#reach">The Walk-Through</a></li>
+            <li><a href="#stephanie">The Builder</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
         </div>
       </div>
 
