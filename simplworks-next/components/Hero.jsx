@@ -106,10 +106,28 @@ export default function Hero() {
       timers.push(id);
     };
 
-    timers.push(setTimeout(typeWord1, 800));
+    // Defer typewriter start until after window.load so Chrome can
+    // commit LCP on the hero-sub paint without counting typewriter
+    // animation frames as LCP-window activity. The typewriter still
+    // runs once per page load — just a beat later. If the page is
+    // already fully loaded (fast connection, cached assets), kick
+    // off immediately with the original 800ms warm-up pause.
+    const kickoff = () => {
+      if (stopped) return;
+      timers.push(setTimeout(typeWord1, 800));
+    };
+
+    let loadHandler = null;
+    if (document.readyState === 'complete') {
+      kickoff();
+    } else {
+      loadHandler = kickoff;
+      window.addEventListener('load', loadHandler, { once: true });
+    }
 
     return () => {
       stopped = true;
+      if (loadHandler) window.removeEventListener('load', loadHandler);
       timers.forEach((t) => {
         clearTimeout(t);
         clearInterval(t);
