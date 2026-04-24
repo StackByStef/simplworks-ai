@@ -82,7 +82,7 @@ export default function TheProcess() {
 
           <button
             type="button"
-            className="continue-reading"
+            className="curious-btn"
             onClick={() => setOverlayOpen(true)}
             aria-haspopup="dialog"
             aria-expanded={overlayOpen}

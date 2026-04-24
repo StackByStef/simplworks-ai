@@ -38,13 +38,15 @@ export default function TheShift() {
         <div className="section-inner">
           <p className="section-label">The Shift</p>
           <h2 className="section-heading">
-            The Game Changed While You Were Building.
+            The Game Changed While You Were Running Your Business.
           </h2>
 
           <p className="beat drop-cap-manual">
             <span className="dc-letter">Y</span>
             <span className="dc-lines">
-              ou know you need to do something. You can feel it.
+              ou know you need to do something.
+              <br />
+              ou can feel it.
             </span>
           </p>
 
@@ -75,7 +77,7 @@ export default function TheShift() {
 
           <button
             type="button"
-            className="continue-reading"
+            className="curious-btn"
             onClick={() => setOverlayOpen(true)}
             aria-haspopup="dialog"
             aria-expanded={overlayOpen}
@@ -104,7 +106,7 @@ export default function TheShift() {
         <div className="editorial-overlay-inner">
           <p className="section-label">The Shift</p>
           <h2 className="section-heading">
-            The Game Changed While You Were Building.
+            The Game Changed While You Were Running Your Business.
           </h2>
 
           <p className="drop-cap-manual">

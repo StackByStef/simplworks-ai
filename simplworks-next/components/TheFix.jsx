@@ -44,16 +44,9 @@ export default function TheFix() {
             Get Your Website Working as Hard as You Do.
           </h2>
 
-          {/* Entity anchor — verbatim, load-bearing for GEO/AEO */}
-          <p className="beat" style={{ color: 'var(--white)', fontWeight: 700 }}>
-            <Brand /> builds custom websites, one at a time, by hand. No
-            templates. No page builders. Every site is built by Stephanie
-            Belote, a 20-year business operator who builds websites the way
-            a business owner needs them built: around the customer, around
-            the sale, and around the way a real business actually runs.
-          </p>
-
-          {/* Mechanism pull-quote — verbatim */}
+          {/* Mechanism pull-quote — verbatim. Entity-anchor definition
+              block moved to overlay top so the in-page flow leads with
+              the hook instead of the entity description. */}
           <p className="mechanism-quote">
             Every site is built by hand around one question: will this bring
             you customers?
@@ -87,7 +80,7 @@ export default function TheFix() {
 
           <button
             type="button"
-            className="continue-reading"
+            className="curious-btn"
             onClick={() => setOverlayOpen(true)}
             aria-haspopup="dialog"
             aria-expanded={overlayOpen}

@@ -59,7 +59,7 @@ export default function TheBuilder() {
           <h2 className="section-heading">
             20 Years in Business.
             <br />
-            One New Mission.
+            1 New Mission.
           </h2>
 
           <p className="beat drop-cap-manual">
@@ -92,12 +92,6 @@ export default function TheBuilder() {
             </p>
           </div>
 
-          <p className="beat">
-            I have dyscalculia. I used my laptop for emails. That&apos;s it.
-            I taught myself to code from nothing. Not because I wanted to
-            become a developer. Because I refused to disappear.
-          </p>
-
           <div className="gold-rule-block">
             <p style={{ color: 'var(--white)', fontWeight: 700 }}>
               I build conversion systems, not brochures. I build them fast,
@@ -109,15 +103,14 @@ export default function TheBuilder() {
             className="beat-strong"
             style={{ color: 'var(--white)', fontWeight: 700 }}
           >
-            <Brand /> is mine. Every line of it. And if you&apos;re a
-            business owner who&apos;s been too busy working hard to notice
-            the game changed around you, I see you. Because I was you. And
-            I&apos;m not going anywhere.
+            If you&apos;re a business owner who&apos;s been too busy working
+            hard to notice the game changed around you, I see you. Because
+            I was you. And I&apos;m not going anywhere.
           </p>
 
           <button
             type="button"
-            className="continue-reading"
+            className="curious-btn"
             onClick={() => setOverlayOpen(true)}
             aria-haspopup="dialog"
             aria-expanded={overlayOpen}
@@ -150,7 +143,7 @@ export default function TheBuilder() {
           <h2 className="section-heading">
             20 Years in Business.
             <br />
-            One New Mission.
+            1 New Mission.
           </h2>
 
           {/* drop-cap-manual pattern: .dc-lines creates a BFC so the body
