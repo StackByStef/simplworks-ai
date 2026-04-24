@@ -335,19 +335,28 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--dim);
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  color: #ffffff;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 10;
 }
 
 .modal-close:hover {
-  color: var(--white);
+  background: var(--gold);
+  color: #000000;
 }
 
 .modal-label {
@@ -1066,15 +1075,15 @@ details[open] .faq-question::after {
 
 .editorial-overlay-close {
   position: fixed;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: var(--muted);
-  font-size: 1.2rem;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   width: 44px;
   height: 44px;
   display: flex;
@@ -1082,11 +1091,12 @@ details[open] .faq-question::after {
   justify-content: center;
   z-index: 2010;
   line-height: 1;
+  padding: 0;
 }
 
 .editorial-overlay-close:hover {
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--gold);
+  color: #000000;
 }
 
 .continue-reading {
