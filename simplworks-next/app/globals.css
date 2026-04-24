@@ -1197,6 +1197,34 @@ footer {
   margin: 0 0 0.6rem;
 }
 
+/* Both footer wordmarks (left Identity column + inline copyright)
+   are anchors that smooth-scroll to the top of the page. Soft
+   gold glow on hover signals interactivity without disturbing
+   the Simpl-white / Works-gold masthead treatment. */
+.footer-mark-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: filter 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-mark-link:hover {
+  filter: brightness(1.1);
+  text-shadow: 0 0 14px rgba(227, 197, 113, 0.4);
+}
+
+.footer-mark-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.footer-mark-link-inline {
+  font-family: var(--font-wordmark);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
 .footer-tagline {
   font-family: var(--font-wordmark-italic);
   font-style: italic;

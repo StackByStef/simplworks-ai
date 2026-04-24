@@ -44,8 +44,9 @@ export default function TheProcess() {
           <p className="beat drop-cap-manual">
             <span className="dc-letter">E</span>
             <span className="dc-lines">
-              very <Brand /> project follows the same path. No surprises.
-              No scope creep.
+              very <Brand /> project follows the same path.
+              <br />
+              No surprises. No scope creep.
             </span>
           </p>
 

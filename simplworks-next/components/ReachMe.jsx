@@ -27,11 +27,11 @@ export default function ReachMe() {
 
         <p className="beat drop-cap-manual">
           <span className="dc-letter">Y</span>
-          <span className="dc-lines">ou have two options.</span>
-        </p>
-
-        <p className="beat-white">
-          Close this page and go back to what you had before.
+          <span className="dc-lines">
+            ou have two options.
+            <br />
+            Close this page and go back to what you had before.
+          </span>
         </p>
 
         <p className="beat-or">OR</p>
