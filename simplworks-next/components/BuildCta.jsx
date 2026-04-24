@@ -35,6 +35,15 @@ export default function BuildCta() {
     return () => obs.disconnect();
   }, [inView]);
 
+  // External trigger: footer REACH ME link dispatches this event so
+  // the Build modal opens directly (skipping the FIX IT/Walk-Through
+  // path that visitors scrolling down might not want).
+  useEffect(() => {
+    const handler = () => setOpen(true);
+    window.addEventListener('open-build-modal', handler);
+    return () => window.removeEventListener('open-build-modal', handler);
+  }, []);
+
   return (
     <>
       <button

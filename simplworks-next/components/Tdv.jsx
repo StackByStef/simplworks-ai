@@ -26,10 +26,9 @@ export default function Tdv() {
         </h2>
 
         <p className="beat drop-cap-manual">
-          <span className="dc-letter">E</span>
+          <span className="dc-letter">T</span>
           <span className="dc-lines">
-            mory and Ellie had spent months planning the launch of Top Dog
-            Vending.
+            op Dog Vending spent months planning its launch.
           </span>
         </p>
 
@@ -45,12 +44,6 @@ export default function Tdv() {
 
         <p className="beat">And they needed it fast.</p>
 
-        <p className="beat">
-          Not in six weeks.
-          <br />
-          Not after twelve rounds of revisions.
-        </p>
-
         <p className="beat-strong">Now.</p>
 
         <div className="gold-rule-block">
@@ -63,18 +56,6 @@ export default function Tdv() {
             question: will this bring in customers?
           </p>
         </div>
-
-        <p className="beat">
-          The site was designed so that when someone searches for what Top
-          Dog Vending does, they find them. When someone asks an AI
-          assistant about smart stores in Knoxville, the business shows up
-          in the answer.
-        </p>
-
-        <p className="beat">
-          The site launched clean, professional, and ready to grow with the
-          company.
-        </p>
 
         <p
           className="section-label"
@@ -153,7 +134,7 @@ export default function Tdv() {
           href="https://www.topdogvendingtn.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="tdv-link"
+          className="curious-btn"
         >
           Visit topdogvendingtn.com &rarr;
         </a>

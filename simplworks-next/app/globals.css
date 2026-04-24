@@ -727,6 +727,7 @@ body {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-style: italic;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -1291,10 +1292,20 @@ a.footer-label-reach:hover {
   line-height: 1.5;
 }
 
+/* INSIDE column inner wrapper — inline-block so it shrink-wraps
+   to the widest link and centers within the column. Label + list
+   share the same left edge because text-align is left inside the
+   wrapper. */
+.footer-links-wrap {
+  display: inline-block;
+  text-align: left;
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .footer-links li {
