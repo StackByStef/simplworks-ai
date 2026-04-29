@@ -1,13 +1,7 @@
 import { Plus_Jakarta_Sans, Lato, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
-// Vercel Web Analytics component removed in V1 — it 404s on
-// /_vercel/insights/script.js until Analytics is enabled on the
-// project via the Vercel dashboard (billed feature). GA4 below
-// covers V1 tracking. To re-enable: toggle Web Analytics in the
-// simplworks-ai Vercel project, then restore:
-//   import { Analytics } from '@vercel/analytics/react';
-//   <Analytics /> inside <body>.
 
 /**
  * Font weights are trimmed to what the CSS and JSX actually reference.
@@ -174,7 +168,10 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
